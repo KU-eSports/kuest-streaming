@@ -1,6 +1,4 @@
 import { defineConfig } from "vite";
 import makeConfig from "./configMaker";
 
-export default defineConfig(() => {
-  return makeConfig("dashboard");
-});
+export default defineConfig(makeConfig("dashboard"));

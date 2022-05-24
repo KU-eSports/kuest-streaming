@@ -1,14 +1,12 @@
 import solidPlugin from "vite-plugin-solid";
-
 import globby from "globby";
 
 const makeInput = (name: string) => {
   let input = {}
-  const files = globby.sync(`./src/${name}/*.html`);
+  const files = globby.sync(`./src/browser/${name}/*.html`);
   for (const file of files) {
     const filename = file.substring(file.lastIndexOf("/") + 1);
     const key = filename.replace(/.html$/, "");
-    console.log(key);
     input[key] = file;
   }
   return input;
@@ -17,7 +15,7 @@ const makeInput = (name: string) => {
 const makeConfig = (name: string) => {
   return {
     plugins: [solidPlugin()],
-    root: `./src/${name}`,
+    root: `./src/browser/${name}`,
     base: "./",
     build: {
       target: "esnext",
@@ -25,7 +23,7 @@ const makeConfig = (name: string) => {
       rollupOptions: {
         input: makeInput(name)
       },
-      outDir: `../../${name}`,
+      outDir: `../../../${name}`,
       emptyOutDir: true
     }
   }

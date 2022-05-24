@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "test": "run-p test:*",
-    "test:graphics": "vite build --watch --config ./config/graphics.ts",
-    "test:dashboard": "vite build --watch --config ./config/dashboard.ts",
+    "dev": "run-p test:*",
+    "dev:dashboard": "vite build --watch --config ./config/dashboard.ts",
+    "dev:graphics": "vite build --watch --config ./config/graphics.ts",
     "build": "run-s build:*",
+    "build:dashboard": "vite build --config ./config/dashboard.ts",
     "build:graphics": "vite build --config ./config/graphics.ts",
-    "build:dashboard": "vite build --config ./config/dashboard.ts"
+    "build:extension": "vite build --config ./config/extension.ts"
   },
   "license": "MIT",
   "devDependencies": {
@@ -25,7 +26,20 @@
   },
   "nodecg": {
     "compatibleRange": "^1.0.0",
-    "dashboardPanels": [],
-    "graphics": []
+    "dashboardPanels": [
+      {
+        "name": "text",
+        "title": "テキスト",
+        "file": "text.html",
+        "width": 2
+      }
+    ],
+    "graphics": [
+      {
+        "file": "test.html",
+        "width": 1920,
+        "height": 1080
+      }
+    ]
   }
 }
