@@ -12,7 +12,7 @@ const makeInput = (name: string) => {
   return input;
 }
 
-const makeConfig = (name: string) => {
+const makeBrowserConfig = (name: string) => {
   return {
     plugins: [solidPlugin()],
     root: `./src/browser/${name}`,
@@ -24,9 +24,9 @@ const makeConfig = (name: string) => {
         input: makeInput(name)
       },
       outDir: `../../../${name}`,
-      emptyOutDir: true
+      emptyOutDir: false
     }
   }
 }
 
-export default makeConfig;
+export default makeBrowserConfig;
