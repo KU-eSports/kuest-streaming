@@ -11,11 +11,16 @@ const App: Component = () => {
 
   createEffect(() => {
     const nodecg = window.nodecg as NodeCGBrowser;
-    const rep = nodecg.Replicant("test");
+    const rep = nodecg.Replicant("valorant");
     rep.on("change", (newValue) => {
       setValue(newValue);
     });
   });
+
+  createEffect(() => {
+    console.log(getValue())
+  })
+  
 
   return (
     <div>{`${getValue()}`}</div>
