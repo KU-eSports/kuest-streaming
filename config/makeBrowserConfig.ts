@@ -24,7 +24,7 @@ const makeBrowserConfig = (name: string) => {
         input: makeInput(name)
       },
       outDir: `../../../${name}`,
-      emptyOutDir: false
+      emptyOutDir: true
     }
   }
 }
