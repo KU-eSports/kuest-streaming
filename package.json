@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "dev": "run-p test:*",
+    "dev": "run-p dev:*",
     "dev:dashboard": "vite build --watch --config ./config/dashboard.ts",
     "dev:graphics": "vite build --watch --config ./config/graphics.ts",
     "build": "run-s build:*",
