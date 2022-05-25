@@ -23,8 +23,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "lottie-web": "^5.9.4",
-    "solid-js": "^1.3.13",
-    "xhr2": "^0.2.1"
+    "solid-js": "^1.3.13"
   },
   "nodecg": {
     "compatibleRange": "^1.0.0",
