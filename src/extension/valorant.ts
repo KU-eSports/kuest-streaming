@@ -1,7 +1,6 @@
 import type { NodeCG } from "../../../../types/server";
 
 import axios from "axios";
-global.XMLHttpRequest = require("xhr2");
 
 export const valorant = async (nodecg: NodeCG) => {
   const rep = nodecg.Replicant("valorant");
