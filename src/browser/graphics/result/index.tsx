@@ -5,16 +5,16 @@ import { useState } from "../../../replicant/state";
 
 import type { NodeCGBrowser } from "../../../../../../types/browser";
 
+import Layout from "./Layout";
+
 const App: Component = () => {
   const nodecg = window.nodecg as NodeCGBrowser;
-  const rep = nodecg.Replicant("valorant");
+  const valorantRep = nodecg.Replicant("valorant");
 
   const [getValue, setValue] = useState();
 
-  createEffect(() => {
-    rep.on("change", (newValue) => {
-      setValue(newValue);
-    });
+  valorantRep.on("change", (newValue) => {
+    setValue(newValue);
   });
 
   createEffect(() => {
@@ -22,9 +22,7 @@ const App: Component = () => {
   })
   
 
-  return (
-    <div>{`${getValue()}`}</div>
-  );
+  return <Layout />;
 };
 
 render(() => <App />, document.getElementById("root") as HTMLElement);

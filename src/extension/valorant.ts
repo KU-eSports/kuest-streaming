@@ -86,9 +86,11 @@ async function getMatchDetails(lockData: LockData, client: Client, id: string) {
   return data;
 }
 
+import test from "./test.json";
 
 export const valorant = async (nodecg: NodeCG) => {
   const valorantRep = nodecg.Replicant<MatchDto | undefined>("valorant");
+  valorantRep.value = test;
   const loop = async () => {
     let lockData: LockData | null = null;
     let sessionData = null;
@@ -120,7 +122,7 @@ export const valorant = async (nodecg: NodeCG) => {
       if (resource.startsWith(prefix)) {
         const id = resource.replace(prefix, "");
         const result = await getMatchDetails(lockData as LockData, client, id);
-        valorantRep.value = result;
+        if (result) valorantRep.value = result;
       }
     });
     ws.on("close", async () => {

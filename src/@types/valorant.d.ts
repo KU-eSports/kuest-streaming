@@ -25,17 +25,17 @@ type MatchInfoDto = {
   mapId: string;
   gameLengthMillis: int;
   gameStartMillis: long;
-  provisioningFlowId: string;	
+  provisioningFlowID: string;	
   isCompleted: boolean;
   customGameName: string;
-  queueId: string;
+  queueID: string;
   gameMode: string;
   isRanked: boolean;
   seasonId: string;
 }
 
 type PlayerDto = {
-  puuid: string;
+  subject: string;
   gameName: string;
   tagLine: string;
   teamId: string;
@@ -82,21 +82,21 @@ type RoundResultDto = {
   roundResult: string;
   roundCeremony: string;
   winningTeam: string;
-  bombPlanter: string;
-  bombDefuser: string;
+  bombPlanter?: string;
+  bombDefuser?: string;
   plantRoundTime: int;
-  plantPlayerLocations: PlayerLocationsDto[];
+  plantPlayerLocations: PlayerLocationsDto[] | null;
   plantLocation: LocationDto;
   plantSite: string;
   defuseRoundTime: int;
-  defusePlayerLocations: PlayerLocationsDto[];
+  defusePlayerLocations: PlayerLocationsDto[] | null;
   defuseLocation: LocationDto;
   playerStats: PlayerRoundStatsDto[];
   roundResultCode: string;
 }
 
 type PlayerLocationsDto = {
-  puuid: string;
+  subject: string;
   viewRadians: float;
   location: LocationDto;
 }
@@ -107,7 +107,7 @@ type LocationDto = {
 }
 
 type PlayerRoundStatsDto = {
-  puuid: string;
+  subject: string;
   kills: KillDto[];
   damage: DamageDto[];
   score: int;
@@ -116,8 +116,8 @@ type PlayerRoundStatsDto = {
 }
 
 type KillDto = {
-  timeSinceGameStartMillis: int;
-  timeSinceRoundStartMillis: int;
+  gameTime: int;
+  roundTime: int;
   killer: string;
   victim: string;
   victimLocation: LocationDto;
@@ -149,10 +149,10 @@ type EconomyDto = {
 }
 
 type AbilityDto = {
-  grenadeEffects: string;
-  ability1Effects: string;
-  ability2Effects: string;
-  ultimateEffects: string;
+  grenadeEffects: string | null;
+  ability1Effects: string | null;
+  ability2Effects: string | null;
+  ultimateEffects: string | null;
 }
 
 type int = number;
