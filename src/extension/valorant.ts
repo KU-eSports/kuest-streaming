@@ -91,7 +91,7 @@ import test from "./test.json";
 export const valorant = async (nodecg: NodeCG) => {
   const valorantRep = nodecg.Replicant<MatchDto | undefined>("valorant");
   valorantRep.value = test;
-  const loop = async () => {
+  /*const loop = async () => {
     let lockData: LockData | null = null;
     let sessionData = null;
     do {
@@ -115,7 +115,7 @@ export const valorant = async (nodecg: NodeCG) => {
       const name = "OnJsonApiEvent_riot-messaging-service_v1_message";
       ws.send(JSON.stringify([5, name]));
     });
-    ws.on("message", async data => {
+    ws.on("message", async (data: Buffer) => {
       if (!data?.toString()) return;
       const resource = JSON.parse(data?.toString())?.[2]?.data?.resource;
       const prefix = "ares-core-game/core-game/v1/matches/";
@@ -129,5 +129,5 @@ export const valorant = async (nodecg: NodeCG) => {
       loop();
     });
   };
-  loop();
+  loop();*/
 }
