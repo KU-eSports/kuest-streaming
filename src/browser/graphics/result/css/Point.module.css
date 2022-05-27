@@ -1,0 +1,28 @@
+.team {
+  width: 100%;
+  text-align: center;
+}
+
+.wl {
+  font-size: 75px;
+}
+
+.point {
+  font-size: 120px;
+}
+
+.Red {
+  color: var(--red-color);
+}
+
+.Blue {
+  color: var(--blue-color);
+}
+
+.win {
+  filter: brightness(100%);
+}
+
+.loss {
+  filter: brightness(50%);
+}

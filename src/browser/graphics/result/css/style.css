@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+:root {
+  --text-color: #f4f5f7;
+  --red-color: #f05b57;
+  --blue-color: #58ddc4;
+  --card-color: hsl(211, 50%, 10%);
+  --watermark-color: hsl(211, 50%, 50%);
+  --role-color: hsl(211, 100%, 50%);
+}
