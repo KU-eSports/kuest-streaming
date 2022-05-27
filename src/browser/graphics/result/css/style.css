@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+:root {
+  --card-color: #0d1926;
+  --watermark-color: #407dbf;
+}

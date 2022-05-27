@@ -1,0 +1,17 @@
+.header {
+  position: absolute;
+  width: 12vw;
+  height: 92vh;
+  top: 5vh;
+  bottom: 3vh;
+  left: 3vw;
+}
+
+.teams {
+  position: absolute;
+  width: 80vw;
+  height: 92vh;
+  top: 5vh;
+  bottom: 3vh;
+  right: 3vw;
+}

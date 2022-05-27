@@ -1,27 +1,31 @@
 import { render } from "solid-js/web";
 
 import { Component, createEffect } from "solid-js";
-import { useState } from "../../../replicant/state";
+import { useContext } from "../../../replicant/context";
 
 import type { NodeCGBrowser } from "../../../../../../types/browser";
 
 import Layout from "./Layout";
+import { MatchDto } from "../../../@types/valorant";
+
+import "./css/style.css";
 
 const App: Component = () => {
   const nodecg = window.nodecg as NodeCGBrowser;
-  const valorantRep = nodecg.Replicant("valorant");
+  const valorantRep = nodecg.Replicant<MatchDto | undefined>("valorant");
 
-  const [getValue, setValue] = useState();
+  const [getValue, setValue] = useContext();
 
-  valorantRep.on("change", (newValue) => {
-    setValue(newValue);
-  });
+  createEffect(() => {
+    valorantRep.on("change", (newValue) => {
+      setValue(JSON.parse(JSON.stringify(newValue)));
+    });
+  })
 
   createEffect(() => {
     console.log(getValue())
   })
   
-
   return <Layout />;
 };
 

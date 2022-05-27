@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@font-face {
+  font-family: 'Kaisotai';
+  src: url('../../../../fonts/kaiso_up_web/Kaisotai-Next-UP-B.eot');
+  src: url('../../../../fonts/kaiso_up_web/Kaisotai-Next-UP-B.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 28px;
+  background-color: var(--card-color);
+}
+
+.card.top {
+  grid-row: 1 / 3;
+  font-size: 60px;
+}
+
+.watermark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--watermark-color);
+}
+
+.mvp {
+  position: absolute;
+  left: -5%;
+  bottom: 0;
+  font-size: 40vmin;
+  font-family: 'Bangers';
+  opacity: 50%;
+  transform: rotate(-18deg);
+}
+
+.bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bg.top {
+  height: calc(100% + 1vh);
+}
+
+.portrait {
+  position: relative;
+  left: 30%;
+  width: 100%;
+  height: 150%;
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.info::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 -2m 2em var(--card-color);
+}
+
+.info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: 'Anton', sans-serif;
+}
+
+.stats {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90%;
+  padding: 1vh 5% 1vh;
+  display: flex;
+  flex-flow: column;
+}
+
+.stats:not(.top) {
+  font-size: 120%;
+}
+
+.stats .attr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  text-align: right;
+}
+
+.stats .key {
+  font-size: 50%;
+}
+
+.stats .value {
+  width: 25%;
+  font-size: 100%;
+}
+
+.name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  padding: 1vh 5% 1vh;
+}
+
+.name .user {
+  line-height: 100%;
+  font-size: 150%;
+  font-family: 'Anton', 'Kaisotai', sans-serif;
+  font-stretch: extra-condensed;
+}
+
+.name .agent {
+  position: relative;
+  left: 5%;
+  font-size: 50%;
+}

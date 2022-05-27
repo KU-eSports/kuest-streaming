@@ -4,6 +4,7 @@
     "Defuser",
     "globby",
     "headshots",
+    "killfeed",
     "legshots",
     "loadout",
     "LOCALAPPDATA",
@@ -12,6 +13,7 @@
     "puuid",
     "replicant",
     "valorant",
-    "vite"
+    "vite",
+    "wwise"
   ]
 }

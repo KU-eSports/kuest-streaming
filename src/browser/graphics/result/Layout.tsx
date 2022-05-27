@@ -1,9 +1,21 @@
-import { Component, createEffect } from "solid-js";
+import { Component } from "solid-js";
+import Header from "./components/Header";
+
+import Teams from "./components/Teams";
+
+import styles from "./css/Layout.module.css";
 
 const Layout: Component = () => {
 
   return (
-    <div></div>
+    <div class="container">
+      <div class={styles.header}>
+        <Header />
+      </div>
+      <div class={styles.teams}>
+        <Teams />
+      </div>
+    </div>
   );
 };
 
