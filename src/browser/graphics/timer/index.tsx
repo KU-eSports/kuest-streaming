@@ -1,19 +1,21 @@
 import { render } from "solid-js/web";
 
 import { Component, createEffect } from "solid-js";
-import { useState } from "../../../replicant/state";
+import { useContext } from "../../../replicant/context";
 
 import type { NodeCGBrowser } from "../../../../../../types/browser";
 
 const App: Component = () => {
 
-  const [getValue, setValue] = useState();
+  const [getValue, setValue] = useContext();
 
   createEffect(() => {
     const nodecg = window.nodecg as NodeCGBrowser;
     const rep = nodecg.Replicant("test");
     rep.on("change", (newValue) => {
-      setValue(newValue);
+      if (!newValue) return;
+      const target = new Date(newValue as string);
+      setValue(target);
     });
   });
 

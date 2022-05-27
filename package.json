@@ -28,15 +28,15 @@
     "compatibleRange": "^1.0.0",
     "dashboardPanels": [
       {
-        "name": "text",
-        "title": "テキスト",
-        "file": "text.html",
+        "name": "time",
+        "title": "時間",
+        "file": "time.html",
         "width": 2
       }
     ],
     "graphics": [
       {
-        "file": "test.html",
+        "file": "timer.html",
         "width": 1920,
         "height": 1080
       }
