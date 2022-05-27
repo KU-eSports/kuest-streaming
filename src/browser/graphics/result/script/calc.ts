@@ -1,4 +1,5 @@
-import { MatchDto } from "../../../../@types/valorant";
+import type { MatchDto } from "../../../../@types/valorant";
+
 
 export function sortPlayers(result: MatchDto) {
   const players = result.players;

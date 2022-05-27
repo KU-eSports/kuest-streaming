@@ -1,7 +1,8 @@
 import { Component } from "solid-js";
-import { AgentDto, PlayerDto } from "../../../../@types/valorant";
+import type { AgentDto, PlayerDto } from "../../../../@types/valorant";
 
 import styles from "../css/Player.module.css";
+
 
 type Props = {
   player: PlayerDto;

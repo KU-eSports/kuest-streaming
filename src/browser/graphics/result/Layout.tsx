@@ -5,10 +5,11 @@ import Teams from "./components/Teams";
 
 import styles from "./css/Layout.module.css";
 
+
 const Layout: Component = () => {
 
   return (
-    <div class="container">
+    <div class={styles.container}>
       <div class={styles.header}>
         <Header />
       </div>

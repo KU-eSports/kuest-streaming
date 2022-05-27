@@ -6,7 +6,7 @@ import fs from "fs";
 import https from "https";
 import WS from "ws";
 
-import { Client, LockData, MatchDto } from "../@types/valorant";
+import type { Client, LockData, MatchDto } from "../@types/valorant";
 
 const instance = axios.create({
   httpsAgent: new https.Agent({
@@ -46,7 +46,7 @@ async function getClient() {
   const res = await axios.get(url);
   const platform = "ew0KCSJwbGF0Zm9ybVR5cGUiOiAiUEMiLA0KCSJwbGF0Zm9ybU9TIjogIldpbmRvd3MiLA0KCSJwbGF0Zm9ybU9TVmVyc2lvbiI6ICIxMC4wLjE5MDQyLjEuMjU2LjY0Yml0IiwNCgkicGxhdGZvcm1DaGlwc2V0IjogIlVua25vd24iDQp9";
   const version = res.data.data.riotClientVersion;
-  const client: Client = { platform, version }
+  const client: Client = { platform, version };
   return client;
 }
 
@@ -67,7 +67,7 @@ async function getToken(lockData: LockData) {
 
 async function getMatchDetails(lockData: LockData, client: Client, id: string) {
   const region = "ap";
-  const [token, entitlement] = await getToken(lockData)
+  const [token, entitlement] = await getToken(lockData);
   const Authorization = `Bearer ${token}`;
   const headers = {
     "X-Riot-Entitlements-JWT": entitlement,
@@ -86,12 +86,10 @@ async function getMatchDetails(lockData: LockData, client: Client, id: string) {
   return data;
 }
 
-import test from "./test.json";
 
 export const valorant = async (nodecg: NodeCG) => {
   const valorantRep = nodecg.Replicant<MatchDto | undefined>("valorant");
-  valorantRep.value = test;
-  /*const loop = async () => {
+  const loop = async () => {
     let lockData: LockData | null = null;
     let sessionData = null;
     do {
@@ -129,5 +127,5 @@ export const valorant = async (nodecg: NodeCG) => {
       loop();
     });
   };
-  loop();*/
-}
+  loop();
+};

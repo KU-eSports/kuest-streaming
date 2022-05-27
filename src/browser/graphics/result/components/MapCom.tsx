@@ -1,7 +1,8 @@
-import { Component, createEffect } from "solid-js";
-import { MapDto } from "../../../../@types/valorant";
+import { Component } from "solid-js";
+import type { MapDto } from "../../../../@types/valorant";
 
 import styles from "../css/MapCom.module.css";
+
 
 type Props = {
   map: MapDto;

@@ -1,7 +1,8 @@
 import { Component } from "solid-js";
-import { TeamDto } from "../../../../@types/valorant";
+import type { TeamDto } from "../../../../@types/valorant";
 
 import styles from "../css/Point.module.css";
+
 
 type Props = {
   team: TeamDto;

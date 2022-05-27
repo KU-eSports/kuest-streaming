@@ -1,12 +1,14 @@
 import { Component } from "solid-js";
+import type { AgentDto, PlayerDto } from "../../../../@types/valorant";
+
 import Player from "./Player";
 
 import styles from "../css/Team.module.css";
-import { Agent, PlayerDto } from "../../../../@types/valorant";
+
 
 type Props = {
   players: PlayerDto[];
-  agents: Agent[];
+  agents: AgentDto[];
 }
 const Team: Component<Props> = (props) => {
   const players = props.players;

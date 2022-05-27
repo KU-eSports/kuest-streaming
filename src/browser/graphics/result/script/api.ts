@@ -1,8 +1,9 @@
 import axios from "axios";
-import { AgentDto, MapDto } from "../../../../@types/valorant";
+import type { AgentDto, MapDto } from "../../../../@types/valorant";
+
 
 export async function getAgents() {
-  const url = "https://valorant-api.com/v1/agents?isPlayableCharacter=true"; //language=ja-JP
+  const url = "https://valorant-api.com/v1/agents?isPlayableCharacter=true";
   const res = await axios.get(url);
   const data = res.data;
   const agents: AgentDto[] = data.data;
@@ -12,7 +13,7 @@ export async function getAgents() {
 async function getMaps() {
   const url = "https://valorant-api.com/v1/maps";
   const res = await axios.get(url);
-  const data = res.data
+  const data = res.data;
   const maps: MapDto[] = data.data;
   return maps;
 }

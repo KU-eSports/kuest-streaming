@@ -1,11 +1,14 @@
-import { Component, createEffect, createSignal} from "solid-js";
-import { MapDto, MatchDto, TeamDto } from "../../../../@types/valorant";
+import { Component, createEffect, createSignal } from "solid-js";
 import { useContext } from "../../../../replicant/context";
+import type { MapDto, MatchDto, TeamDto } from "../../../../@types/valorant";
 
-import styles from "../css/Header.module.css";
-import { getMap } from "../script/api";
 import MapCom from "./MapCom";
 import Point from "./Point";
+
+import styles from "../css/Header.module.css";
+
+import { getMap } from "../script/api";
+
 
 const Header: Component = () => {
 
