@@ -8,6 +8,9 @@ body {
 
 
 :root {
-  --card-color: #0d1926;
-  --watermark-color: #407dbf;
+  --text-color: white;
+  --red-color: #f05b57;
+  --blue-color: #58ddc4;
+  --card-color: hsl(211, 50%, 10%);
+  --watermark-color: hsl(211, 50%, 50%);
 }

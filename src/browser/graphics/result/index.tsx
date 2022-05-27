@@ -20,11 +20,7 @@ const App: Component = () => {
     valorantRep.on("change", (newValue) => {
       setValue(JSON.parse(JSON.stringify(newValue)));
     });
-  })
-
-  createEffect(() => {
-    console.log(getValue())
-  })
+  });
   
   return <Layout />;
 };

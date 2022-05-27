@@ -4,7 +4,7 @@ import Team from "./Team";
 
 import styles from "../css/Teams.module.css";
 import { useContext } from "../../../../replicant/context";
-import { Agent, MatchDto, PlayerDto } from "../../../../@types/valorant";
+import { AgentDto, MatchDto, PlayerDto } from "../../../../@types/valorant";
 import { sortPlayers } from "../script/calc";
 import { getAgents } from "../script/api";
 
@@ -13,7 +13,7 @@ const Teams: Component = () => {
   const [getResult, _] = useContext();
 
   const [getPlayers, setPlayers] = createSignal<PlayerDto[][]>();
-  const [getAgentsData, setAgentsData] = createSignal<Agent[]>();
+  const [getAgentsData, setAgentsData] = createSignal<AgentDto[]>();
 
   createEffect(() => {
     const result = getResult() as (MatchDto | undefined);

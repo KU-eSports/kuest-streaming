@@ -1,11 +1,11 @@
 import { Component } from "solid-js";
-import { Agent, PlayerDto } from "../../../../@types/valorant";
+import { AgentDto, PlayerDto } from "../../../../@types/valorant";
 
 import styles from "../css/Player.module.css";
 
 type Props = {
   player: PlayerDto;
-  agent: Agent;
+  agent: AgentDto;
   top: boolean;
 }
 const Player: Component<Props> = (props) => {
@@ -29,20 +29,20 @@ const Player: Component<Props> = (props) => {
       <div class={styles.info}>
         <div class={styles.name}>
           <div class={styles.user}>{player.gameName}</div>
-          <div class={styles.agent}>as {agent.displayName}</div>
+          <div class={`${styles.agent} ${styles[player.teamId]}`}>as {agent.displayName}</div>
         </div>
         <div class={`${styles.stats} ${top ? styles.top : ""}`}>
           <div class={styles.attr}>
-            <div class={styles.key}>ACS</div>
+            <div class={`${styles.key} ${styles[player.teamId]}`}>ACS</div>
             <div class={styles.value}>{acs}</div>
           </div>
           <div class={styles.attr}>
-            <div class={styles.key}>KDA</div>
+            <div class={`${styles.key} ${styles[player.teamId]}`}>KDA</div>
             <div class={styles.value}>{kda}</div>
           </div>
           {top &&
             <div class={styles.attr}>
-              <div class={styles.key}>KILL</div>
+              <div class={`${styles.key} ${styles[player.teamId]}`}>KILL</div>
               <div class={styles.value}>{player.stats.kills}</div>
             </div>
           }
