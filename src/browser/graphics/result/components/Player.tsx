@@ -20,6 +20,8 @@ const Player: Component<Props> = (props) => {
     <div class={`${styles.card} ${top ? styles.top : ""}`}>
       <div class={styles.watermark}>
         {top && <div class={styles.mvp}>MVP</div>}
+        <div class={`${styles.role} ${top ? styles.top : ""}`}>
+          <img src={agent.role.displayIcon}  /></div>
       </div>
       <div class={`${styles.bg} ${top ? styles.top : ""}`}>
         <div class={styles.portrait}>
