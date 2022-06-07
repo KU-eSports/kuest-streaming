@@ -1,27 +1,27 @@
 import { render } from "solid-js/web";
 
 import { Component, createEffect } from "solid-js";
-import { NodeCGBrowser } from "../../../../../../types/browser";
+import { useContext } from "../../../replicant/time";
 
-import { useContext } from "../../../replicant/text";
+import type { NodeCGBrowser } from "../../../../../../types/browser";
 
-import Layout from './Layout';
+import Layout from "./Layout";
 
 import "./css/style.css";
 
 const App: Component = () => {
   const nodecg = window.nodecg as NodeCGBrowser;
-  const textRep = nodecg.Replicant("text", { persistent: false });
+  const timeRep = nodecg.Replicant("time", { persistent: false });
 
   const [getValue, _] = useContext();
 
   createEffect(() => {
-    textRep.value = getValue();
+    timeRep.value = getValue();
   });
-  
-	return (
-    <Layout/>
-	);
+
+  return (
+    <Layout />
+  );
 };
 
 render(() => <App />, document.getElementById("root") as HTMLElement);

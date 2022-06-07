@@ -32,11 +32,17 @@
         "title": "テキスト",
         "file": "text.html",
         "width": 2
+      },
+      {
+        "name": "time",
+        "title": "時間",
+        "file": "time.html",
+        "width": 2
       }
     ],
     "graphics": [
       {
-        "file": "test.html",
+        "file": "waiting.html",
         "width": 1920,
         "height": 1080
       }
