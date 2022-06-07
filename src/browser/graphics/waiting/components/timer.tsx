@@ -1,7 +1,7 @@
 import { Component, createEffect, createSignal, Match, Show, Switch } from "solid-js";
-import { NodeCGBrowser } from "../../../../../../types/browser";
+import { NodeCGBrowser } from "../../../../../../../types/browser";
 
-import styles from "./css/timer.module.css";
+import styles from "../css/timer.module.css";
 
 const refresh = 500;
 
@@ -32,8 +32,7 @@ const Timer: Component = () => {
   });
 
   createEffect(() => {
-    getNow();
-    setTimeout(() => {
+    setInterval(() => {
       const now = new Date();
       setNow(now.getTime());
     }, refresh);
