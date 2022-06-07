@@ -1,4 +1,4 @@
-import { Component, createEffect, createSignal, Match, Show, Switch } from "solid-js";
+import { Component, createEffect, createSignal, Show } from "solid-js";
 import { AgentDto } from "../../../../@types/valorant";
 import { getAgents } from "../script/api";
 

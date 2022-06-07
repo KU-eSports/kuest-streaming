@@ -1,5 +1,6 @@
 import { Component } from "solid-js";
-import Agent from "./components/Agent";
+import Agent from "./components/agent";
+import Telop from "./components/telop";
 import Timer from "./components/timer";
 
 import styles from "./css/Layout.module.css";
@@ -14,7 +15,8 @@ const Layout: Component = () => {
       <div class={styles.timer}>
         <Timer />
       </div>
-      <div>
+      <div class={styles.telop}>
+        <Telop />
       </div>
     </div>
   );

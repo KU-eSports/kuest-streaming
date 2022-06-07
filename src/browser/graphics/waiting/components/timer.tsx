@@ -39,10 +39,10 @@ const Timer: Component = () => {
   });
 
   return (
-    <div class={styles.container}>
-      <Show when={getTarget()}>
-        {(target) => {
-          return (
+    <Show when={getTarget()}>
+      {(target) => {
+        return (
+          <div class={styles.container}>
             <Show when={getNow()}>
               {(now) => {
                 const diff = target - now;
@@ -68,10 +68,10 @@ const Timer: Component = () => {
                 );
               }}
             </Show>
-          );
-        }}
+          </div>
+        );
+      }}
       </Show>
-    </div>
   );
 };
 
