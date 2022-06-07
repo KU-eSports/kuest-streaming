@@ -1,7 +1,7 @@
 import { render } from "solid-js/web";
 
 import { Component, createEffect } from "solid-js";
-import { useContext } from "../../../replicant/context";
+import { useContext } from "../../../replicant/time";
 
 import type { NodeCGBrowser } from "../../../../../../types/browser";
 
@@ -17,7 +17,7 @@ const App: Component = () => {
 
   return (
     <div>
-      <input type="time" onChange={(e) => setValue(e.target["value"])} />
+      <input type="datetime-local" onChange={(e) => setValue(e.target["value"])} />
     </div>
   );
 };
