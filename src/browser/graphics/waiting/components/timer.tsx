@@ -8,7 +8,7 @@ const refresh = 500;
 const msToMS = (ms: number) => {
   const ss = Math.ceil(ms / 1000);
   const s = ss % 60;
-  const m = ss - s;
+  const m = Math.round(ss - s) / 60;
   return [m, s];
 };
 
