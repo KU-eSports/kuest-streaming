@@ -63,7 +63,7 @@ const Timer: Component = () => {
                       </div>
                     </Match>
                     <Match when={diff <= 0}>
-                      <div>Coming soon</div>
+                      <div class={styles.text}>Coming soon</div>
                     </Match>
                   </Switch>
                 );
