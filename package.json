@@ -41,6 +41,12 @@
         "title": "時間",
         "file": "time.html",
         "width": 2
+      },
+      {
+        "name": "map",
+        "title": "マップ",
+        "file": "map.html",
+        "width": 2
       }
     ],
     "graphics": [

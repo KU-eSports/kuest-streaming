@@ -41,5 +41,28 @@ export type AgentDto = {
   };
 }
 
+export type MapDto = {
+  uuid: string;
+  displayName: string;
+  coordinates: string;
+  displayIcon: string;
+  listViewIcon: string;
+  splash: string;
+  assetPath: string;
+  mapUrl: string;
+  xMultiplier: single;
+  yMultiplier: single;
+  xScalarToAdd: single;
+  yScalarToAdd: single;
+  callouts: {
+    regionName: string;
+    superRegionName: string;
+    location: {
+      x: single;
+      y: single;
+    };
+  }[];
+}
+
 type int32 = number;
 type single = number;

@@ -10,6 +10,7 @@ const toomo_src = [toomo_default, toomo_speak];
 import secchanu_default from "./assets/secchanu/default.png";
 import secchanu_speak from "./assets/secchanu/speak.png";
 import Banner from "./components/banner";
+import Footer from "./components/footer";
 const secchanu_src = [secchanu_default, secchanu_speak];
 
 const Layout: Component = () => {
@@ -24,7 +25,7 @@ const Layout: Component = () => {
         <Voice id="197321407762399233" name="secchanu" src={secchanu_src} />
       </div>
       <div class={styles.footer}>
-        
+        <Footer />
       </div>
     </div>
   );
