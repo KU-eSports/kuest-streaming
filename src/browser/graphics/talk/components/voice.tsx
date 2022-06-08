@@ -1,5 +1,5 @@
 import { Snowflake } from "discord.js";
-import { Component, createEffect, createSignal } from "solid-js";
+import { Component, createEffect, createSignal, Show } from "solid-js";
 import { NodeCGBrowser } from "../../../../../../../types/browser";
 import { VoiceTrack } from "../../../../@types/discord";
 
@@ -19,30 +19,27 @@ const Voice: Component<Props> = (props) => {
   const discordRep = nodecg.Replicant<VoiceTrack>("discord", { persistent: false });
 
   const [getVoice, setVoice] = createSignal<boolean>(false);
+  const [getState, setState] = createSignal<boolean>(false);
 
-  createEffect(() => {
-    let oldState = "end";
+  setInterval(() => {
+    setVoice(getState());
+  }, 200);
+
+  createEffect((oldState) => {
     discordRep.on("change", (newValue) => {
       if (newValue.userId !== id) return;
       if (newValue.state === oldState) return;
-      switch (newValue.state) {
-        case "start": {
-          setVoice(true);
-          break;
-        }
-        case "end": {
-          setVoice(false);
-          break;
-        }
-      }
-      oldState = newValue.state
+      setState(newValue.state === "start");
+      return newValue.state;
     });
   });
 
   return (
     <div class={styles.wrapper}>
       <div class={styles.icon}>
-        <img class={getVoice() ? styles.speaking : styles.unspeaking} src={getVoice() ? src[1] : src[0]} />
+        <Show when={getVoice()} fallback={<img class={styles.unspeaking} src={src[0]} />}>
+          <img class={styles.speaking} src={src[1]} />
+        </Show>
       </div>
       <div class={styles.name}>{name}</div>
     </div>
