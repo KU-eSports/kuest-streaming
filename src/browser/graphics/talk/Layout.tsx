@@ -6,6 +6,8 @@ import styles from "./css/Layout.module.css";
 import Banner from "./components/banner";
 import Footer from "./components/footer";
 
+import watermark from "./assets/logo/KUeST_logo_mono_alpha.png";
+
 import toomo_default from "./assets/toomo/default.gif";
 import toomo_speak from "./assets/toomo/speak.gif";
 const toomo_src = [toomo_default, toomo_speak];
@@ -18,6 +20,10 @@ const Layout: Component = () => {
 
   return (
     <div class={styles.container}>
+      <div class={styles.watermark}>
+        <img class={styles.left} src={watermark} />
+        <img class={styles.right} src={watermark} />
+      </div>
       <div class={styles.header}>
         <Banner text="KUeST - VALORANT CUSTOM GAME" />
       </div>
