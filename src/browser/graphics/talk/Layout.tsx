@@ -3,14 +3,15 @@ import Voice from "./components/voice";
 
 import styles from "./css/Layout.module.css";
 
+import Banner from "./components/banner";
+import Footer from "./components/footer";
+
 import toomo_default from "./assets/toomo/default.gif";
 import toomo_speak from "./assets/toomo/speak.gif";
 const toomo_src = [toomo_default, toomo_speak];
 
-import secchanu_default from "./assets/secchanu/default.png";
-import secchanu_speak from "./assets/secchanu/speak.png";
-import Banner from "./components/banner";
-import Footer from "./components/footer";
+import secchanu_default from "./assets/secchanu/default.gif";
+import secchanu_speak from "./assets/secchanu/speak.gif";
 const secchanu_src = [secchanu_default, secchanu_speak];
 
 const Layout: Component = () => {

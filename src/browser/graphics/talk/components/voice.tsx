@@ -21,8 +21,10 @@ const Voice: Component<Props> = (props) => {
   const [getVoice, setVoice] = createSignal<boolean>(false);
 
   createEffect(() => {
+    let oldState = "end";
     discordRep.on("change", (newValue) => {
       if (newValue.userId !== id) return;
+      if (newValue.state === oldState) return;
       switch (newValue.state) {
         case "start": {
           setVoice(true);
@@ -33,6 +35,7 @@ const Voice: Component<Props> = (props) => {
           break;
         }
       }
+      oldState = newValue.state
     });
   });
 
