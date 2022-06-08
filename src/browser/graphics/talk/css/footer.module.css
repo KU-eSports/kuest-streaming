@@ -1,0 +1,66 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  height: 100%;
+}
+
+.info {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  transform: translateX(150%);
+  animation: slideIn 1.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.logo img {
+  height: 100%;
+  padding: 5%;
+  object-fit: contain;
+}
+
+.map {
+  position: relative;
+  height: 100%;
+  float: right;
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+}
+
+.map img {
+  height: 100%;
+  object-fit: contain;
+  box-shadow: inset 0 0 2em #000;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  padding: 5%;
+}
+
+.next {
+  position: absolute;
+  float: right;
+  top: 50%;
+  right: 105%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  font-family: 'Anton', sans-serif;
+  font-size: 50px;
+}
