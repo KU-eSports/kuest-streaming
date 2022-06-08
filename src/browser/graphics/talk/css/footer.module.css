@@ -28,10 +28,23 @@
   }
 }
 
+.logo {
+  animation: rotate 3s infinite;
+}
+
 .logo img {
   height: 100%;
-  padding: 5%;
+  padding: 10%;
   object-fit: contain;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 .map {
@@ -39,7 +52,7 @@
   height: 100%;
   float: right;
   font-family: 'Anton', sans-serif;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .map img {
@@ -51,16 +64,16 @@
 .label {
   position: absolute;
   top: 0;
-  padding: 5%;
+  padding: 2% 4%;
 }
 
 .next {
   position: absolute;
   float: right;
-  top: 50%;
-  right: 105%;
-  transform: translateY(-50%);
+  bottom: 30%;
+  right: 85%;
   white-space: nowrap;
   font-family: 'Anton', sans-serif;
-  font-size: 50px;
+  font-size: 60px;
+  transform: rotate(90deg);
 }
