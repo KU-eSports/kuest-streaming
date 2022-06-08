@@ -1,11 +1,6 @@
 import type { NodeCG } from "../../../../types/server";
+import discord from "./discord";
 
 export default (nodecg: NodeCG) => {
-  const rep = nodecg.Replicant("test");
-  let count = 0;
-  setInterval(() => {
-    rep.value = count;
-    count++;
-  }, 1000);
+  discord(nodecg);
 }
-

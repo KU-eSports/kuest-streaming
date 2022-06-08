@@ -1,0 +1,23 @@
+.wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.icon {
+  height: 80%;
+}
+
+.icon img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.name {
+  position: absolute;
+  bottom: 0%;
+  height: 20%;
+  width: 100%;
+  text-align: center;
+  font-family: 'Impact', 'Anton', sans-serif;
+  font-size: 60px;
+}
