@@ -7,7 +7,7 @@ KUeSTのチャンネルを充実させよう
 
 6月9日 [KUeST VALORANTカスタム](https://youtu.be/XbmxlHjoXOk)  
 
-![valorantcustom_220609](obs\thumbnail\220609.png)
+![valorantcustom_220609](./obs/thumbnail/220609.png)
 
 
 ## 今後の活動
