@@ -22,7 +22,7 @@ KUeSTのチャンネルを充実させよう
 
 ***
 
-## 活動のために開発したツール・bot等
+## 活動のために製作したツール・bot等
 
 - [VALORANTリザルト表示ツール](https://github.com/secchanu/nodecg-valorant.git)  
   製作：[secchanu](https://github.com/secchanu)
