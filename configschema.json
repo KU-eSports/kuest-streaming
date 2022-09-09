@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "discord": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "targetWords": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "consumerKey": { "type": "string" },
+        "consumerSecret": { "type": "string" },
+        "accessToken": { "type": "string" },
+        "accessTokenSecret": { "type": "string" }
+      },
+      "required": [
+        "targetWords",
+        "consumerKey",
+        "consumerSecret",
+        "accessToken",
+        "accessTokenSecret"
+      ]
+    }
+  }
+}

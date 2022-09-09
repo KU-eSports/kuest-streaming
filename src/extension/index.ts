@@ -1,6 +1,8 @@
-import type { NodeCG } from "../../../../types/server";
+import "source-map-support/register";
+import { NodeCG } from "./nodecg";
+
 import discord from "./discord";
 
-export default (nodecg: NodeCG) => {
+export = (nodecg: NodeCG) => {
   discord(nodecg);
-}
+};
