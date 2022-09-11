@@ -1,7 +1,7 @@
 import * as replicant from "./generated/index";
 
 type ReplicantMap = {
-  tweets: replicant.Tweets;
+  valorantMap: replicant.ValorantMap;
 };
 
 export { ReplicantMap };

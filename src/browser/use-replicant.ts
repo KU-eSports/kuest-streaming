@@ -11,7 +11,7 @@ import { ReplicantMap } from "../nodecg/replicants";
 export const useReplicant = <TRepName extends keyof ReplicantMap>(
   replicantName: TRepName
 ) => {
-  const replicant = nodecg.Replicant<ReplicantMap[TRepName]>(replicantName);
+  const replicant = nodecg.Replicant(replicantName);
   const [value, updateValue] = useState<ReplicantMap[TRepName] | null>(null);
 
   useEffect(() => {

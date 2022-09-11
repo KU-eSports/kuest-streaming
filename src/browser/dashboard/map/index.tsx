@@ -1,27 +1,30 @@
-import { render } from "solid-js/web";
+import type { FunctionComponent } from "react";
+import { useState } from "react";
+import Display from "./component/display";
+import Select from "./component/select";
+import Submit from "./component/submit";
 
-import { Component, createEffect } from "solid-js";
-import { NodeCGBrowser } from "../../../../../../types/browser";
+import "modern-normalize";
+import styles from "./css/style.module.css";
 
-import { useContext } from "../../../replicant/map";
+const Component: FunctionComponent = () => {
+  const [map, setMap] = useState();
 
-import Layout from './Layout';
-
-import "./css/style.css";
-
-const App: Component = () => {
-  const nodecg = window.nodecg as NodeCGBrowser;
-  const textRep = nodecg.Replicant("map", { persistent: false });
-
-  const [getValue, _] = useContext();
-
-  createEffect(() => {
-    textRep.value = getValue();
-  });
-  
-	return (
-    <Layout/>
-	);
+  return (
+    <div className={styles.container}>
+      <div className={styles.display}>
+        <Display map={map} />
+      </div>
+      <div className={styles.flex}>
+        <div className={styles.select}>
+          <Select setMap={setMap} />
+        </div>
+        <div className={styles.submit}>
+          <Submit map={map} />
+        </div>
+      </div>
+    </div>
+  );
 };
 
-render(() => <App />, document.getElementById("root") as HTMLElement);
+export default Component;

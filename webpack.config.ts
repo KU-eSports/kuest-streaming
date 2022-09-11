@@ -10,13 +10,6 @@ import nodeExternals from "webpack-node-externals";
 
 const isProduction = process.env["NODE_ENV"] === "production";
 const isWatch = Boolean(process.env["WEBPACK_WATCH"]);
-const { TYPEKIT_ID } = process.env;
-if (!TYPEKIT_ID) {
-  console.error("TYPEKIT_ID is empty");
-  if (isProduction) {
-    process.exit(1);
-  }
-}
 
 const base: webpack.Configuration = {
   watch: isWatch,
@@ -29,7 +22,7 @@ const base: webpack.Configuration = {
 
 const makeBrowserConfig = (name: string): webpack.Configuration => {
   const entry: webpack.Entry = {};
-  const files = globby.sync(`./src/browser/${name}/views/*.tsx`);
+  const files = globby.sync(`./src/browser/${name}/*.tsx`);
   for (const file of files) {
     entry[path.basename(file, ".tsx")] = file;
   }
@@ -88,7 +81,6 @@ const makeBrowserConfig = (name: string): webpack.Configuration => {
             filename: `${entryName}.html`,
             chunks: [entryName],
             template: `webpack/${name}.html`,
-            typekitId: TYPEKIT_ID,
           })
       ),
       new MiniCssExtractPlugin({
@@ -142,7 +134,7 @@ const extensionConfig = merge(base, {
 
 const config: webpack.Configuration[] = [
   makeBrowserConfig("dashboard"),
-  makeBrowserConfig("graphics"),
+  //makeBrowserConfig("graphics"),
   extensionConfig,
 ];
 

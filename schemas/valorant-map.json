@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "uuid": { "type": "string" },
+    "coordinates": { "type": "string" },
+    "displayName": { "type": "string" },
+    "displayIcon": { "type": "string" },
+    "listViewIcon": { "type": "string" },
+    "splash": { "type": "string" },
+    "assetPath": { "type": "string" },
+    "mapUrl": { "type": "string" },
+    "xMultiplier": { "type": "number" },
+    "yMultiplier": { "type": "number" },
+    "xScalarToAdd": { "type": "number" },
+    "yScalarToAdd": { "type": "number" },
+    "callouts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "regionName": { "type": "string" },
+        "superRegionName": { "type": "string" },
+        "location": {
+          "type": "object",
+          "x": { "type": "number" },
+          "y": { "type": "number" }
+        }
+      }
+    }
+  },
+  "default": []
+}

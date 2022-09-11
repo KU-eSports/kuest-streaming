@@ -7,9 +7,9 @@
     "clean": "del-cli bundle-analyzer dashboard extension graphics",
     "dev": "run-p dev:*",
     "dev:schema-types": "onchange schemas configschema.json -i -- nodecg schema-types -o src/nodecg/generated",
-    "dev:tsc": "yarn test:types -w --preserveWatchOutput",
+    "dev:tsc": "npm run test:types -w --preserveWatchOutput",
     "dev:webpack": "cross-env WEBPACK_WATCH=true webpack",
-    "format": "yarn test:prettier --write",
+    "format": "npm run test:prettier --write",
     "prod": "cross-env NODE_ENV=production run-s clean build",
     "schema-types": "del-cli src/nodecg/generated && nodecg schema-types -o src/nodecg/generated",
     "test": "run-s test:lint test:prettier schema-types test:types",
@@ -19,22 +19,37 @@
   },
   "license": "MIT",
   "dependencies": {
-    "lodash-es": "^4.17.21",
-    "react": "^18.2.0"
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.19.0",
     "@types/lodash-es": "^4.17.6",
     "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.6",
     "@types/source-map-support": "^0.5.4",
     "@types/webpack-bundle-analyzer": "^4.4.2",
+    "@types/webpack-env": "^1.18.0",
     "@types/webpack-node-externals": "^2.5.3",
+    "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
     "del-cli": "^5.0.0",
+    "file-loader": "^6.2.0",
     "globby": "^11.0.4",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
+    "modern-normalize": "^1.1.0",
     "nodecg-cli": "^8.0.1",
+    "npm-run-all": "^4.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-loader": "^9.3.1",
+    "ts-node": "^10.9.1",
+    "ts-nodecg": "^0.3.1",
+    "typescript": "^4.8.3",
     "webpack": "^5.74.0",
     "webpack-bundle-analyzer": "^4.6.1",
+    "webpack-cli": "^4.10.0",
     "webpack-merge": "^5.8.0",
     "webpack-node-externals": "^3.0.0",
     "webpackbar": "^5.0.2"
@@ -43,34 +58,10 @@
     "compatibleRange": "^1.0.0",
     "dashboardPanels": [
       {
-        "name": "text",
-        "title": "テキスト",
-        "file": "text.html",
-        "width": 2
-      },
-      {
-        "name": "time",
-        "title": "時間",
-        "file": "time.html",
-        "width": 2
-      },
-      {
         "name": "map",
         "title": "マップ",
         "file": "map.html",
         "width": 2
-      }
-    ],
-    "graphics": [
-      {
-        "file": "waiting.html",
-        "width": 1920,
-        "height": 1080
-      },
-      {
-        "file": "talk.html",
-        "width": 1920,
-        "height": 1080
       }
     ]
   }

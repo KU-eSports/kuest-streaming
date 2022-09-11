@@ -20,6 +20,10 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+
+    "paths": {
+      "@/types/*": ["./src/@types/*"]
+    }
   }
 }
