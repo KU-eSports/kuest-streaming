@@ -12,7 +12,6 @@ const component: FunctionComponent<Props> = (props) => {
   return (
     <div className={styles.display}>
       <img src={map?.splash} />
-      {/*TODO 未選択時の画像用意する*/}
     </div>
   );
 };
