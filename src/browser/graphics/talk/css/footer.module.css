@@ -51,7 +51,7 @@
   position: relative;
   height: 100%;
   float: right;
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 40px;
 }
 
@@ -73,7 +73,7 @@
   bottom: 30%;
   right: 85%;
   white-space: nowrap;
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 60px;
   transform: rotate(90deg);
 }

@@ -20,12 +20,18 @@
       "type": "array",
       "items": {
         "type": "object",
-        "regionName": { "type": "string" },
-        "superRegionName": { "type": "string" },
-        "location": {
-          "type": "object",
-          "x": { "type": "number" },
-          "y": { "type": "number" }
+        "additionalProperties": false,
+        "properties": {
+          "regionName": { "type": "string" },
+          "superRegionName": { "type": "string" },
+          "location": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "x": { "type": "number" },
+              "y": { "type": "number" }
+            }
+          }
         }
       }
     }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 .container {
   position: relative;
@@ -23,25 +23,6 @@
   display: flex;
   justify-content: center;
   gap: 20%;
-}
-
-.watermark {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  opacity: 50%;
-}
-
-.watermark .left {
-  position: absolute;
-  left: 0;
-  transform: translateX(-50%);
-}
-
-.watermark .right {
-  position: absolute;
-  right: 0;
-  transform: translateX(50%);
 }
 
 .footer {

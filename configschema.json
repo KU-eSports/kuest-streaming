@@ -4,6 +4,15 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "title": { "type": "string" }
+    "title": { "type": "string" },
+    "discord": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "token": { "type": "string" },
+        "guild": { "type": "string" },
+        "channel": { "type": "string" }
+      }
+    }
   }
 }
