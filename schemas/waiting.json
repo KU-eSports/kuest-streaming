@@ -4,6 +4,9 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "title": { "type": "string" }
-  }
+    "title": { "type": "string" },
+    "message": { "type": "string" },
+    "timer": { "type": "object" }
+  },
+  "default": []
 }

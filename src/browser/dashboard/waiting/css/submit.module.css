@@ -1,0 +1,9 @@
+.submit {
+  width: 100%;
+}
+
+.submit button {
+  width: 16%;
+  margin: 0 42%;
+  font-size: 20px;
+}

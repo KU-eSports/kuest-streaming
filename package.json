@@ -63,6 +63,12 @@
         "title": "マップ",
         "file": "map.html",
         "width": 2
+      },
+      {
+        "name": "waiting",
+        "title": "待機画面",
+        "file": "waiting.html",
+        "width": 3
       }
     ]
   }
