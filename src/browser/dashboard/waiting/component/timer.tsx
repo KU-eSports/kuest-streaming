@@ -18,17 +18,16 @@ const minutes2date = (minutes: string) => {
   return date;
 };
 
-const pad0 = (number: number) => {
-  const pad = `00${number}`.slice(-2);
-  return pad;
+const pad0 = (number: number, length: number) => {
+  return ("0".repeat(length) + number).slice(-length);
 };
 
 const getISO = (date: Date) => {
   const yyyy = date.getFullYear();
-  const MM = pad0(date.getMonth() + 1);
-  const dd = pad0(date.getDate());
-  const hh = pad0(date.getHours());
-  const mm = pad0(date.getMinutes());
+  const MM = pad0(date.getMonth() + 1, 2);
+  const dd = pad0(date.getDate(), 2);
+  const hh = pad0(date.getHours(), 2);
+  const mm = pad0(date.getMinutes(), 2);
   const iso = `${yyyy}-${MM}-${dd}T${hh}:${mm}`;
   return iso;
 };
