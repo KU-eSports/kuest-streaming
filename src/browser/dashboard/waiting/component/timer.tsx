@@ -35,7 +35,7 @@ const getISO = (date: Date) => {
 type Props = {
   setWaiting: Function;
 };
-const component: FunctionComponent<Props> = (props) => {
+const Component: FunctionComponent<Props> = (props) => {
   const [now, setNow] = useState(new Date());
   now.setSeconds(0);
   now.setMilliseconds(0);
@@ -93,4 +93,4 @@ const component: FunctionComponent<Props> = (props) => {
   );
 };
 
-export default component;
+export default Component;

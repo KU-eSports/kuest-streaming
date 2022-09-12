@@ -6,7 +6,7 @@ import styles from "../css/display.module.css";
 type Props = {
   map: MapDto | undefined;
 };
-const component: FunctionComponent<Props> = (props) => {
+const Component: FunctionComponent<Props> = (props) => {
   const map = props.map;
 
   return (
@@ -16,4 +16,4 @@ const component: FunctionComponent<Props> = (props) => {
   );
 };
 
-export default component;
+export default Component;

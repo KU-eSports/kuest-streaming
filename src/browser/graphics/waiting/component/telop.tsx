@@ -4,7 +4,7 @@ import { useReplicant } from "../../../use-replicant";
 
 import styles from "../css/telop.module.css";
 
-const component: FunctionComponent = () => {
+const Component: FunctionComponent = () => {
   const waiting = useReplicant("waiting");
   const title = (waiting?.title || nodecg.bundleConfig.title) ?? "";
   const message = waiting?.message ?? "";
@@ -17,4 +17,4 @@ const component: FunctionComponent = () => {
   );
 };
 
-export default component;
+export default Component;

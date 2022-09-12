@@ -10,7 +10,7 @@ import styles from "../css/select.module.css";
 type Props = {
   setMap: Function;
 };
-const component: FunctionComponent<Props> = (props) => {
+const Component: FunctionComponent<Props> = (props) => {
   const [maps, setMaps] = useState<MapDto[]>([]);
   const setMap = props.setMap;
 
@@ -48,4 +48,4 @@ const component: FunctionComponent<Props> = (props) => {
   );
 };
 
-export default component;
+export default Component;

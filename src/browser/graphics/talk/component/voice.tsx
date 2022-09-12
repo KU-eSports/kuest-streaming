@@ -11,7 +11,7 @@ type Props = {
   name: string;
   src: [string, string];
 };
-const component: FunctionComponent<Props> = (props) => {
+const Component: FunctionComponent<Props> = (props) => {
   const userId = props.userId;
   const name = props.name;
   const src = props.src;
@@ -20,8 +20,7 @@ const component: FunctionComponent<Props> = (props) => {
   const [state, setState] = useState(false);
 
   useEffect(() => {
-    if (userId !== voice?.userId) return;
-    setState(voice.isSpeak ?? false);
+    if (userId === voice?.userId) setState(voice.isSpeak ?? false);
   }, [voice]);
 
   return (
@@ -38,4 +37,4 @@ const component: FunctionComponent<Props> = (props) => {
   );
 };
 
-export default component;
+export default Component;

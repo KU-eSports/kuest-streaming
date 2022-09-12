@@ -19,7 +19,7 @@ const pad0 = (number: number, length: number) => {
   return ("0".repeat(length) + number).slice(-length);
 };
 
-const component: FunctionComponent = () => {
+const Component: FunctionComponent = () => {
   const [now, setNow] = useState<number>(new Date().getTime());
   const waiting = useReplicant("waiting");
   const timer = waiting?.timer ?? 0;
@@ -54,4 +54,4 @@ const component: FunctionComponent = () => {
   );
 };
 
-export default component;
+export default Component;

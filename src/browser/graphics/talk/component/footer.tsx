@@ -6,7 +6,7 @@ import styles from "../css/footer.module.css";
 
 import logo from "../image/logo/KUeST_logo_alpha.png";
 
-const component: FunctionComponent = () => {
+const Component: FunctionComponent = () => {
   const map = useReplicant("valorantMap");
 
   return (
@@ -27,4 +27,4 @@ const component: FunctionComponent = () => {
   );
 };
 
-export default component;
+export default Component;

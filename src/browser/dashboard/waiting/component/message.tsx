@@ -5,7 +5,7 @@ import styles from "../css/message.module.css";
 type Props = {
   setWaiting: Function;
 };
-const component: FunctionComponent<Props> = (props) => {
+const Component: FunctionComponent<Props> = (props) => {
   const setMessage = (message: string) => {
     props.setWaiting((pre: object) => {
       return {
@@ -22,4 +22,4 @@ const component: FunctionComponent<Props> = (props) => {
   );
 };
 
-export default component;
+export default Component;

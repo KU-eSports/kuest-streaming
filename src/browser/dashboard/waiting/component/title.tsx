@@ -5,7 +5,7 @@ import styles from "../css/title.module.css";
 type Props = {
   setWaiting: Function;
 };
-const component: FunctionComponent<Props> = (props) => {
+const Component: FunctionComponent<Props> = (props) => {
   const setTitle = (title: string) => {
     props.setWaiting((pre: object) => {
       return {
@@ -26,4 +26,4 @@ const component: FunctionComponent<Props> = (props) => {
   );
 };
 
-export default component;
+export default Component;

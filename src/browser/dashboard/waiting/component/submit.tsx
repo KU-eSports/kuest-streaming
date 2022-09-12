@@ -7,7 +7,7 @@ const waitingRep = nodecg.Replicant("waiting");
 type Props = {
   waiting: Object;
 };
-const component: FunctionComponent<Props> = (props) => {
+const Component: FunctionComponent<Props> = (props) => {
   const waiting = props.waiting;
 
   return (
@@ -17,4 +17,4 @@ const component: FunctionComponent<Props> = (props) => {
   );
 };
 
-export default component;
+export default Component;

@@ -4,7 +4,7 @@ import styles from "../css/watermark.module.css";
 
 import watermark from "../image/logo/KUeST_logo_mono_alpha.png";
 
-const component: FunctionComponent = () => {
+const Component: FunctionComponent = () => {
   return (
     <div className={styles.watermark}>
       <img className={styles.left} src={watermark} />
@@ -13,4 +13,4 @@ const component: FunctionComponent = () => {
   );
 };
 
-export default component;
+export default Component;

@@ -10,7 +10,7 @@ const valorantMapRep = nodecg.Replicant("valorantMap");
 type Props = {
   map: MapDto | undefined;
 };
-const component: FunctionComponent<Props> = (props) => {
+const Component: FunctionComponent<Props> = (props) => {
   const map = props.map;
   const current = useReplicant("valorantMap");
 
@@ -26,4 +26,4 @@ const component: FunctionComponent<Props> = (props) => {
   );
 };
 
-export default component;
+export default Component;
