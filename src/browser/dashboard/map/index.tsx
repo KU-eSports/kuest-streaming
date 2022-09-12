@@ -1,5 +1,7 @@
 import type { FunctionComponent } from "react";
+
 import { useState } from "react";
+
 import Display from "./component/display";
 import Select from "./component/select";
 import Submit from "./component/submit";

@@ -1,5 +1,6 @@
-import { MapDto } from "@/types/valorant";
+import type { MapDto } from "@/types/valorant";
 import type { FunctionComponent } from "react";
+
 import { useReplicant } from "../../../use-replicant";
 
 import styles from "../css/submit.module.css";

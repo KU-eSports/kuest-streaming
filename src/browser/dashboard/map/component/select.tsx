@@ -1,5 +1,6 @@
 import type { MapDto } from "@/types/valorant";
 import type { FunctionComponent } from "react";
+
 import { useEffect, useState } from "react";
 
 import { getMaps } from "../script/api";

@@ -1,4 +1,4 @@
-import { MapDto } from "@/types/valorant";
+import type { MapDto } from "@/types/valorant";
 import type { FunctionComponent } from "react";
 
 import styles from "../css/display.module.css";

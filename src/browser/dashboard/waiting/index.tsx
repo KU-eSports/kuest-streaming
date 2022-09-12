@@ -1,12 +1,14 @@
 import type { FunctionComponent } from "react";
+
 import { useState } from "react";
 
-import "modern-normalize";
-import styles from "./css/style.module.css";
 import Title from "./component/title";
 import Timer from "./component/timer";
 import Message from "./component/message";
 import Submit from "./component/submit";
+
+import "modern-normalize";
+import styles from "./css/style.module.css";
 
 const Component: FunctionComponent = () => {
   const [waiting, setWaiting] = useState({
