@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
 
@@ -33,7 +33,7 @@
   width: 100%;
   height: 100%;
   font-size: 150px;
-  font-family: 'FOT-レイルウェイ Std', monospace;
+  font-family: "FOT-レイルウェイ Std", monospace;
 }
 
 .text {
@@ -43,7 +43,7 @@
   width: 100%;
   height: 100%;
   font-size: 60px;
-  font-family: 'FOT-レイルウェイ Std', monospace;
+  font-family: "FOT-レイルウェイ Std", monospace;
   text-align: center;
 }
 

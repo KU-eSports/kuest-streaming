@@ -39,7 +39,7 @@ export type AgentDto = {
       wave: string;
     }[];
   };
-}
+};
 
 export type MapDto = {
   uuid: string;
@@ -62,7 +62,7 @@ export type MapDto = {
       y: single;
     };
   }[];
-}
+};
 
 type int32 = number;
 type single = number;
