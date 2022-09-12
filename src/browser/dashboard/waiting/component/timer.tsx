@@ -52,7 +52,7 @@ const component: FunctionComponent<Props> = (props) => {
     props.setWaiting((pre: object) => {
       return {
         ...pre,
-        timer,
+        timer: timer.getTime(),
       };
     });
   };

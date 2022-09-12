@@ -6,7 +6,7 @@
   "properties": {
     "title": { "type": "string" },
     "message": { "type": "string" },
-    "timer": { "type": "object" }
+    "timer": { "type": "integer" }
   },
   "default": []
 }

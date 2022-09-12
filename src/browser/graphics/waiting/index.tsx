@@ -1,14 +1,26 @@
-import { render } from "solid-js/web";
+import type { FunctionComponent } from "react";
 
-import { Component } from "solid-js";
+import Agent from "./component/agent";
+import Timer from "./component/timer";
+import Telop from "./component/telop";
 
-import Layout from "./Layout";
+import "modern-normalize";
+import styles from "./css/style.module.css";
 
-import "./css/style.css";
-
-const App: Component = () => {
-
-  return <Layout />;
+const Component: FunctionComponent = () => {
+  return (
+    <div className={styles.container}>
+      <div className={styles.agent}>
+        <Agent />
+      </div>
+      <div className={styles.timer}>
+        <Timer />
+      </div>
+      <div className={styles.telop}>
+        <Telop />
+      </div>
+    </div>
+  );
 };
 
-render(() => <App />, document.getElementById("root") as HTMLElement);
+export default Component;

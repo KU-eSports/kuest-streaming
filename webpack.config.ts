@@ -134,7 +134,7 @@ const extensionConfig = merge(base, {
 
 const config: webpack.Configuration[] = [
   makeBrowserConfig("dashboard"),
-  //makeBrowserConfig("graphics"),
+  makeBrowserConfig("graphics"),
   extensionConfig,
 ];
 

@@ -70,6 +70,13 @@
         "file": "waiting.html",
         "width": 3
       }
+    ],
+    "graphics": [
+      {
+        "file": "waiting.html",
+        "width": 1920,
+        "height": 1080
+      }
     ]
   }
 }
