@@ -11,7 +11,11 @@ const Component: FunctionComponent<Props> = (props) => {
 
   return (
     <div className={styles.display}>
-      <img src={map?.splash} />
+      {map?.splash ? (
+        <img src={map?.splash} />
+      ) : (
+        <div className={styles.holder}>未選択</div>
+      )}
     </div>
   );
 };

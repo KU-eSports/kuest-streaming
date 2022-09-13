@@ -14,8 +14,8 @@ const Component: FunctionComponent = () => {
       <div className={styles.logo}>
         <img src={logo} />
       </div>
-      {!!map && (
-        <div className={styles.info}>
+      {map?.uuid && (
+        <div key={map.uuid} className={styles.info}>
           <div className={styles.map}>
             <img src={map.splash} />
             <div className={styles.label}>{map.displayName}</div>
