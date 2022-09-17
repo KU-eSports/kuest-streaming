@@ -51,7 +51,7 @@
   position: relative;
   height: 100%;
   float: right;
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 40px;
 }
 
@@ -70,10 +70,10 @@
 .next {
   position: absolute;
   float: right;
-  bottom: 30%;
+  bottom: 35%;
   right: 85%;
   white-space: nowrap;
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 60px;
   transform: rotate(90deg);
 }

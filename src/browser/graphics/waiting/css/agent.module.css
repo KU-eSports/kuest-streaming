@@ -12,9 +12,8 @@
   filter: grayscale();
   opacity: 0%;
   transform: translateY(-40%);
-  animation: slide 10s forwards,
-             fade linear 1s forwards,
-             fade linear 1s 9s reverse forwards;
+  animation: slide 10s forwards, fade linear 1s forwards,
+    fade linear 1s 9s reverse forwards;
 }
 
 @keyframes slide {
