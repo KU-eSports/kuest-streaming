@@ -1,0 +1,3 @@
+type MessageMap = {};
+
+export { MessageMap };

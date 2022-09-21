@@ -1,0 +1,9 @@
+.message {
+  width: 100%;
+}
+
+.message input {
+  width: 92%;
+  margin: 0 4%;
+  font-size: 20px;
+}

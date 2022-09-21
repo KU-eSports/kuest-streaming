@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "title": { "type": "string" },
+    "discord": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "token": { "type": "string" },
+        "guild": { "type": "string" },
+        "channel": { "type": "string" }
+      }
+    }
+  }
+}

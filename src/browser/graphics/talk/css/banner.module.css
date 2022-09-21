@@ -16,8 +16,8 @@
   top: 30%;
   height: 50%;
   white-space: nowrap;
-  animation: marquee 20s linear infinite;
-  font-family: 'Impact', 'Anton', sans-serif;
+  animation: marquee 30s linear infinite;
+  font-family: "Impact", "Anton", sans-serif;
   font-size: 100px;
   line-height: 100px;
 }
