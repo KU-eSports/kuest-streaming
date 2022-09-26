@@ -1,5 +1,7 @@
 import type { FunctionComponent } from "react";
 
+import { useReplicant } from "../../use-replicant";
+
 import Watermark from "./component/watermark";
 import Banner from "./component/banner";
 import Voice from "./component/voice";
@@ -16,6 +18,8 @@ import secchanu_speak from "./image/secchanu/speak.gif";
 const secchanu_src: [string, string] = [secchanu_default, secchanu_speak];
 
 const Component: FunctionComponent = () => {
+  const voice = useReplicant("discordVoice");
+
   return (
     <div className={styles.container}>
       <Watermark />
@@ -23,8 +27,18 @@ const Component: FunctionComponent = () => {
         <Banner />
       </div>
       <div className={styles.voices}>
-        <Voice userId="346592327701102594" name="Toomo" src={toomo_src} />
-        <Voice userId="197321407762399233" name="secchanu" src={secchanu_src} />
+        <Voice
+          userId="346592327701102594"
+          name="Toomo"
+          src={toomo_src}
+          voice={voice}
+        />
+        <Voice
+          userId="197321407762399233"
+          name="secchanu"
+          src={secchanu_src}
+          voice={voice}
+        />
       </div>
       <div className={styles.footer}>
         <Footer />

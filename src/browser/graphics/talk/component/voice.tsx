@@ -1,8 +1,7 @@
 import type { FunctionComponent } from "react";
 
 import { useEffect, useState } from "react";
-
-import { useReplicant } from "../../../use-replicant";
+import { DiscordVoice } from "../../../../nodecg/generated";
 
 import styles from "../css/voice.module.css";
 
@@ -10,18 +9,20 @@ type Props = {
   userId: string;
   name: string;
   src: [string, string];
+  voice: DiscordVoice | null;
 };
 const Component: FunctionComponent<Props> = (props) => {
   const userId = props.userId;
   const name = props.name;
   const src = props.src;
-  const voice = useReplicant("discordVoice");
+  const voice = props.voice;
 
   const [state, setState] = useState(false);
 
   useEffect(() => {
-    if (userId === voice?.userId) setState(voice.isSpeak ?? false);
-  }, [voice]);
+    if (userId !== voice?.userId) return;
+    setState(voice.isSpeak ?? false);
+  }, [userId, voice]);
 
   return (
     <div className={styles.wrapper}>
