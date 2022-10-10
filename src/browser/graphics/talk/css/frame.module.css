@@ -1,0 +1,25 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.title {
+  width: 200%;
+  height: 50%;
+  background-color: #dbf143;
+  position: absolute;
+  top: -30%;
+  left: -50%;
+  transform: rotate(-5.5deg);
+}
+
+.info {
+  width: 200%;
+  height: 50%;
+  background-color: #dbf143;
+  position: absolute;
+  bottom: -30%;
+  left: -50%;
+  transform: rotate(-5.5deg);
+}

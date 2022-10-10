@@ -10,11 +10,15 @@ import styles from "./css/style.module.css";
 const Component: FunctionComponent = () => {
   return (
     <div className={styles.container}>
-      <Background />
-      <div>
-        <Voice />
+      <div className={styles.background}>
+        <Background />
       </div>
-      <Frame />
+      {/* <div>
+        <Voice />
+      </div> */}
+      <div className={styles.frame}>
+        <Frame />
+      </div>
     </div>
   );
 };

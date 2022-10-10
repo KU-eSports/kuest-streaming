@@ -7,9 +7,15 @@ import styles from "../css/frame.module.css";
 
 const Component: FunctionComponent = () => {
   return (
-    <div>
-      <Title />
-      <Info />
+    <div className={styles.wrapper}>
+      <div className={styles.title}>
+        <Title />
+      </div>
+      <div className={styles.info}>
+        <Info />
+      </div>
+      <div className={styles.right}></div>
+      <div className={styles.left}></div>
     </div>
   );
 };
