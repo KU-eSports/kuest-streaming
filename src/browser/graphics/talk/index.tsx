@@ -5,6 +5,7 @@ import Frame from "./component/frame";
 import Voice from "./component/voice";
 
 import "modern-normalize";
+import "../../common/css/splatnet.css";
 import styles from "./css/style.module.css";
 
 const Component: FunctionComponent = () => {

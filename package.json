@@ -5,18 +5,19 @@
   "scripts": {
     "start": "(cd ../.. && node index.js)",
     "build": "webpack",
-    "clean": "del-cli bundle-analyzer dashboard extension graphics",
+    "clean": "del-cli bundle-analyzer dashboard extension graphics external",
     "dev": "run-p dev:*",
     "dev:schema-types": "onchange schemas configschema.json -i -- nodecg schema-types -o src/nodecg/generated",
     "dev:tsc": "tsc -b src/browser src/extension -w --preserveWatchOutput",
     "dev:webpack": "cross-env WEBPACK_WATCH=true webpack",
     "format": "prettier \"**/*.{ts,tsx,json,html,yml,css,scss,md}\" --check --write",
-    "prod": "cross-env NODE_ENV=production run-s schema-types clean build",
+    "prod": "cross-env NODE_ENV=production run-s schema-types clean build external",
     "schema-types": "del-cli src/nodecg/generated && nodecg schema-types -o src/nodecg/generated",
     "test": "run-s test:lint test:prettier schema-types test:types",
     "test:prettier": "prettier \"**/*.{ts,tsx,json,html,yml,css,scss,md}\" --check",
     "test:lint": "eslint --ext .ts .",
-    "test:types": "tsc -b src/browser src/extension"
+    "test:types": "tsc -b src/browser src/extension",
+    "external": "mkdirp external && nget -i nget.txt -P external -nQ"
   },
   "license": "MIT",
   "dependencies": {
@@ -35,6 +36,7 @@
     "@types/webpack-node-externals": "^2.5.3",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
+    "@warren-bank/node-request-cli": "^4.0.18",
     "babel-loader": "^8.2.5",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
@@ -46,6 +48,7 @@
     "globby": "^11.0.4",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
+    "mkdirp": "^1.0.4",
     "modern-normalize": "^1.1.0",
     "nodecg-cli": "^8.0.1",
     "npm-run-all": "^4.1.5",
@@ -90,6 +93,12 @@
         "file": "talk.html",
         "width": 1920,
         "height": 1080
+      }
+    ],
+    "mount": [
+      {
+        "directory": "external",
+        "endpoint": "external"
       }
     ]
   }

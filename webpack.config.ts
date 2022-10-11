@@ -68,6 +68,7 @@ const makeBrowserConfig = (name: string): webpack.Configuration => {
                   exportLocalsConvention: "camelCase",
                 },
                 sourceMap: true,
+                url: false,
               },
             },
           ],
