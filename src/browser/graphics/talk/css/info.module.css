@@ -1,0 +1,9 @@
+.wrapper {
+    width: 200%;
+    height: 50%;
+    background-color: #f15d43;
+    position: absolute;
+    bottom: -30%;
+    left: -50%;
+    transform: rotate(-5.5deg);
+  }

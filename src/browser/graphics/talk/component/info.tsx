@@ -5,7 +5,7 @@ import styles from "../css/info.module.css";
 const Component: FunctionComponent = () => {
   return <div className={styles.wrapper}>
     <div className={styles.next}>Next Map</div>
-    <div className={styles.mapname}></div>  {/* TODO ここstyles.じゃない気がする */}
+    <div className={styles.mapname}>ヤガラ市場</div>
   </div>;
 };
 
