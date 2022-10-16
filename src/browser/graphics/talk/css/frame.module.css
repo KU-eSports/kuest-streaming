@@ -4,22 +4,19 @@
   position: relative;
 }
 
-.title {
+.title, .info {
   width: 102%;
   height: 30%;
-  background-color: #dbf143;
+  background-color: var(--color-yellow);
   position: absolute;
-  top: -10%;
   left: -1%;
   transform: rotate(5.5deg);
 }
 
+.title {
+  top: -10%;
+}
+
 .info {
-  width: 102%;
-  height: 30%;
-  background-color: #dbf143;
-  position: absolute;
   bottom: -10%;
-  left: -1%;
-  transform: rotate(5.5deg);
 }
