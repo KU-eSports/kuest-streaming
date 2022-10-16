@@ -2,7 +2,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: scroll;
+  overflow: hidden;
   font-size: 10vmin;
 }
 

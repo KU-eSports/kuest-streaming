@@ -9,10 +9,10 @@ const Component: FunctionComponent = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
-        <Title />
+        <Info />
       </div>
       <div className={styles.info}>
-        <Info />
+        <Title />
       </div>
       <div className={styles.right}></div>
       <div className={styles.left}></div>

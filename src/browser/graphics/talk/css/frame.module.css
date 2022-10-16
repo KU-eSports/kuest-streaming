@@ -5,21 +5,21 @@
 }
 
 .title {
-  width: 200%;
-  height: 50%;
+  width: 102%;
+  height: 30%;
   background-color: #dbf143;
   position: absolute;
-  top: -30%;
-  left: -50%;
-  transform: rotate(-5.5deg);
+  top: -10%;
+  left: -1%;
+  transform: rotate(5.5deg);
 }
 
 .info {
-  width: 200%;
-  height: 50%;
+  width: 102%;
+  height: 30%;
   background-color: #dbf143;
   position: absolute;
-  bottom: -30%;
-  left: -50%;
-  transform: rotate(-5.5deg);
+  bottom: -10%;
+  left: -1%;
+  transform: rotate(5.5deg);
 }
