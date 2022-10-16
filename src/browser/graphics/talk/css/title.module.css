@@ -20,7 +20,6 @@
 
 .logo {
     /* padding: 0 0 0 0; */
-    transform: rotate(-20deg);
     height: 100%;
     object-fit: cover;
     grid-row: 3/6;
