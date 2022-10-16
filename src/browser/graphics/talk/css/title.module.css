@@ -1,0 +1,35 @@
+.wrapper {
+  height: 100%;
+  /* background-color: #f15d43; */
+  font-family: var(--font-family-s2);
+  color: var(--color-background);
+  font-size: 100%;
+  position: relative;
+}
+
+.display {
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 2% auto auto auto;
+  grid-template-rows: 3% 25% 5% 30% 24% 12%;
+  gap: 0px 10px;
+}
+
+.logo {
+    /* padding: 0 0 0 0; */
+    transform: rotate(-20deg);
+    height: 100%;
+    object-fit: cover;
+    grid-row: 3/6;
+    grid-column: 2/4;
+}
+
+.title {
+    width: 100%;
+    white-space: nowrap;
+    grid-row: 2/4;
+    grid-column: 4/5;
+}
