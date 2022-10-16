@@ -25,6 +25,16 @@
     object-fit: cover;
     grid-row: 3/6;
     grid-column: 2/4;
+    animation: rotate 3s infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 .title {
