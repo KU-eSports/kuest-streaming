@@ -12,12 +12,44 @@
   position: absolute;
   left: -1%;
   transform: rotate(5.5deg);
+  z-index: 2;
 }
 
 .title {
   top: -10%;
+  z-index: 4;
+
 }
 
 .info {
   bottom: -10%;
+ 
 }
+.right {
+  width: 20%;
+  height: 150%;
+  background-color: #5452f6 ;
+  position: absolute;
+  right: -10%;
+  transform: rotate(10deg);
+  z-index:3;
+}
+/*.lefttop {
+  width: 20%;
+  height: 150%;
+  background-color: #5452f6 ;
+  position: absolute;
+  left: -10%;
+  z-index: 5;
+  transform: rotate(10deg); /* TODO 角度と太さの調整
+
+} 
+.leftbottom {
+  width: 20%;
+  height: 50%;
+  background-color: #5452f6 ;
+  position: absolute;
+  left: -10%;
+  transform: rotate(10deg);/* TODO 位置調整
+}*/
+
