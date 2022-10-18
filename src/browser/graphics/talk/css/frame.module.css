@@ -30,26 +30,31 @@
   height: 150%;
   background-color: #5452f6 ;
   position: absolute;
-  right: -10%;
-  transform: rotate(10deg);
+  right: -12%;
+  transform: rotate(11deg);
   z-index:3;
 }
-/*.lefttop {
-  width: 20%;
-  height: 150%;
+.lefttop {
+  width: 23%;
+  height: 60%;
+  top: -10%;
   background-color: #5452f6 ;
   position: absolute;
-  left: -10%;
+  left: -13%;
   z-index: 5;
-  transform: rotate(10deg); /* TODO 角度と太さの調整
+  transform-origin: left top;
+  transform: rotate(11deg); 
 
 } 
 .leftbottom {
-  width: 20%;
-  height: 50%;
+  width: 23%;
+  top: -10%;
+  height:100%;
   background-color: #5452f6 ;
   position: absolute;
-  left: -10%;
-  transform: rotate(10deg);/* TODO 位置調整
-}*/
+  left: -13%;
+  transform-origin: left top;
+  transform: rotate(11deg);
+  z-index: 1;
+}
 
