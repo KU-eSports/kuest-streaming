@@ -19,12 +19,12 @@
 }
 
 .logo {
-    /* padding: 0 0 0 0; */
-    height: 100%;
-    object-fit: cover;
-    grid-row: 3/6;
-    grid-column: 2/4;
-    animation: rotate 3s infinite;
+  /* padding: 0 0 0 0; */
+  height: 100%;
+  object-fit: cover;
+  grid-row: 3/6;
+  grid-column: 2/4;
+  animation: rotate 3s infinite;
 }
 
 @keyframes rotate {
@@ -37,9 +37,9 @@
 }
 
 .title {
-    width: 100%;
-    white-space: nowrap;
-    grid-row: 2/4;
-    grid-column: 4/5;
-    font-size: 95%;
+  width: 100%;
+  white-space: nowrap;
+  grid-row: 2/4;
+  grid-column: 4/5;
+  font-size: 95%;
 }

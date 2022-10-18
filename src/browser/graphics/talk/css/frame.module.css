@@ -18,43 +18,39 @@
 .title {
   top: -10%;
   z-index: 4;
-
 }
 
 .info {
   bottom: -10%;
- 
 }
 .right {
   width: 20%;
   height: 150%;
-  background-color: #5452f6 ;
+  background-color: #5452f6;
   position: absolute;
   right: -12%;
   transform: rotate(11deg);
-  z-index:3;
+  z-index: 3;
 }
 .lefttop {
   width: 23%;
   height: 60%;
   top: -10%;
-  background-color: #5452f6 ;
+  background-color: #5452f6;
   position: absolute;
   left: -13%;
   z-index: 5;
   transform-origin: left top;
-  transform: rotate(11deg); 
-
-} 
+  transform: rotate(11deg);
+}
 .leftbottom {
   width: 23%;
   top: -10%;
-  height:100%;
-  background-color: #5452f6 ;
+  height: 100%;
+  background-color: #5452f6;
   position: absolute;
   left: -13%;
   transform-origin: left top;
   transform: rotate(11deg);
   z-index: 1;
 }
-
