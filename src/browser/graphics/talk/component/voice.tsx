@@ -6,14 +6,14 @@ const Component: FunctionComponent = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-      <div className={styles.left}>
-        <div className={styles.name}></div>
-        <img className={styles.lefticon} src="" />
-      </div>
-      <div className={styles.right}>
-        <div className={styles.name}></div>
-        <img className={styles.righticon} src="" />
-      </div>
+        <div className={styles.left}>
+          <div className={styles.name}></div>
+          <img className={styles.lefticon} src="" />
+        </div>
+        <div className={styles.right}>
+          <div className={styles.name}></div>
+          <img className={styles.righticon} src="" />
+        </div>
       </div>
     </div>
   );
