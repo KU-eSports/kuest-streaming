@@ -16,6 +16,7 @@ const Component: FunctionComponent = () => {
       </div>
       <div className={styles.voice}>
         <Voice />
+        <Voice />   
       </div>
       <div className={styles.frame}>
         <Frame />

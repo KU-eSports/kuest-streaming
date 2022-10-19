@@ -35,4 +35,8 @@
   bottom: 0;
   left: 0;
   z-index: 6;
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+  align-items: center;
 }
