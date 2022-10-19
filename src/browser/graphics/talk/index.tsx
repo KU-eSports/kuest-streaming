@@ -14,9 +14,9 @@ const Component: FunctionComponent = () => {
       <div className={styles.background}>
         <Background />
       </div>
-      {/* <div>
+      <div className={styles.voice}>
         <Voice />
-      </div> */}
+      </div>
       <div className={styles.frame}>
         <Frame />
       </div>
