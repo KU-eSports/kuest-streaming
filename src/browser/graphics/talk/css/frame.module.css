@@ -23,34 +23,33 @@
 .info {
   bottom: -10%;
 }
-.right {
-  width: 20%;
-  height: 150%;
-  background-color: #5452f6;
+
+.right,
+.left {
+  width: 24%;
+  background-color: var(--color-blue);
   position: absolute;
-  right: -12%;
   transform: rotate(11deg);
+}
+
+.right {
+  height: 100%;
+  bottom: -10%;
+  right: -13%;
+  transform-origin: right bottom;
   z-index: 3;
 }
-.lefttop {
-  width: 23%;
-  height: 60%;
+
+.left {
   top: -10%;
-  background-color: #5452f6;
-  position: absolute;
   left: -13%;
-  z-index: 5;
   transform-origin: left top;
-  transform: rotate(11deg);
 }
-.leftbottom {
-  width: 23%;
-  top: -10%;
+.left.top {
+  height: 60%;
+  z-index: 5;
+}
+.left.bottom {
   height: 100%;
-  background-color: #5452f6;
-  position: absolute;
-  left: -13%;
-  transform-origin: left top;
-  transform: rotate(11deg);
   z-index: 1;
 }

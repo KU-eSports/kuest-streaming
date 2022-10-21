@@ -15,8 +15,8 @@ const Component: FunctionComponent = () => {
         <Title />
       </div>
       <div className={styles.right}></div>
-      <div className={styles.lefttop}></div>
-      <div className={styles.leftbottom}></div>
+      <div className={`${styles.left} ${styles.top}`}></div>
+      <div className={`${styles.left} ${styles.bottom}`}></div>
     </div>
   );
 };

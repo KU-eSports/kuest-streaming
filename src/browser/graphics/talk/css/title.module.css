@@ -19,7 +19,6 @@
 }
 
 .logo {
-  /* padding: 0 0 0 0; */
   height: 100%;
   object-fit: cover;
   grid-row: 3/6;
@@ -29,10 +28,10 @@
 
 @keyframes rotate {
   from {
-    transform: rotateY(0deg);
+    transform: rotateY(0deg) rotateZ(-30deg);
   }
   to {
-    transform: rotateY(360deg);
+    transform: rotateY(360deg) rotateZ(-30deg);
   }
 }
 

@@ -1,75 +1,57 @@
-.container {
-  width: 15%;
-  height: 50%;
-  background-color: blueviolet;
+.wrapper {
+  width: 30%;
+  height: 40%;
   font-family: var(--font-family-s2);
   color: white;
   font-size: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 5%;
+  position: relative;
+}
+
+.icon {
+  max-height: 18vh;
+  object-fit: cover;
+  flex: 1;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  flex: 2;
   display: grid;
   justify-items: center;
   align-items: center;
   grid-template-columns: 1fr;
-  grid-template-rows: 20% 30% 30% 20%;
-  gap: 5%;
-  overflow: hidden;
-}
-
-.icon {
-  height: 100%;
-  grid-column: 1/1;
-  grid-row: 2/3;
-  object-fit: cover;
+  grid-template-rows: 1fr;
+  position: relative;
+  padding: 0 2%;
 }
 
 .name {
-  overflow: hidden;
-  /* background-color: brown; */
-  width: 90%;
+  width: 100%;
   z-index: 3;
   color: aliceblue;
   text-align: center;
   grid-column: 1/1;
-  grid-row: 3/4;
-  padding: 10%;
+  grid-row: 1/1;
+  white-space: nowrap;
+  position: relative;
 }
 
-.name span {
-  display     : inline-block;
-  padding-left: 100%;
-  white-space : nowrap;
-  line-height : 1em;
-  animation   : scrollAnime 1s linear infinite;
-}
-
-@keyframes scrollAnime{
-  0% { transform: translateX(0)}
-100% { transform: translateX(-100%)}
-}
-
-/* .name::before {
-  content: "";
-
-  width: 100%;
-  height: 70%;
-  background-color: black;
-  border: 8px solid;
-  border-color: blue;
-  transform: skew(20deg);
-  z-index: 2;
-  grid-column: 1/1;
-  grid-row: 3/4;
-}  */
-
-.box{
+.box {
+  left: 0;
   top: 0;
   width: 100%;
-  height: 70%;
+  height: 50%;
   background-color: black;
-  border: 8px solid;
-  border-color: blue;
+  border: 8px solid blue;
   transform: skew(20deg);
   z-index: 2;
   grid-column: 1/1;
-  grid-row: 3/4;
+  grid-row: 1/1;
   position: relative;
 }

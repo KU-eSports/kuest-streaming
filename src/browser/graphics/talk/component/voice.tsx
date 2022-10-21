@@ -2,17 +2,17 @@ import type { FunctionComponent } from "react";
 
 import styles from "../css/voice.module.css";
 
-import icontest from "../image/icontest.gif"
+import icontest from "../image/icontest.gif";
 
 const Component: FunctionComponent = () => {
   return (
-        <div className={styles.container}>
-          <img className={styles.icon} src={icontest} />
-          <div className={styles.name}>
-            <span>secchanu</span>
-          </div>
-          <div className={styles.box}></div>
-        </div>
+    <div className={styles.wrapper}>
+      <img className={styles.icon} src={icontest} />
+      <div className={styles.container}>
+        <div className={styles.name}>へのへのもへじ</div>
+        <div className={styles.box}></div>
+      </div>
+    </div>
   );
 };
 
