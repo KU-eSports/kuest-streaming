@@ -1,6 +1,5 @@
 .wrapper {
   height: 100%;
-  /* background-color: #f15d43; */
   font-family: var(--font-family-s2);
   color: var(--color-background);
   font-size: 100%;
@@ -27,13 +26,13 @@
 }
 
 @keyframes rotate {
-    from {
-      transform: rotateZ(-25deg) rotateY(0deg);
-    }
-    to {
-      transform: rotateZ(-25deg) rotateY(360deg);
-    }
+  from {
+    transform: rotateZ(-25deg) rotateY(0deg);
   }
+  to {
+    transform: rotateZ(-25deg) rotateY(360deg);
+  }
+}
 
 .title {
   width: 100%;

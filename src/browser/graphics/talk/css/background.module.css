@@ -1,10 +1,10 @@
 .background {
   background: repeating-linear-gradient(
     -42deg,
-    /* 角度の指定 */ #3e454e,
-    /* 色A ... 開始 */ #3e454e 120px,
-    /* 色A ... 終了 */ #69727c 120px,
-    /* 色B ... 開始 */ #69727c 240px /* 色B ... 終了 */
+    #3e454e,
+    #3e454e 120px,
+    #69727c 120px,
+    #69727c 240px
   );
   width: 100%;
   height: 100%;
