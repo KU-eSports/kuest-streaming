@@ -10,7 +10,7 @@ const Component: FunctionComponent = () => {
       <img className={styles.icon} src={icontest} />
       <div className={styles.container}>
         <div className={styles.box}></div>
-        <div className={styles.name}>secchanu</div>
+        <div className={styles.name}>yyyyyhhhh名無し</div>
       </div>
     </div>
   );
