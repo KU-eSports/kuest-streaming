@@ -1,0 +1,55 @@
+.wrapper {
+  width: 30%;
+  height: 40%;
+  font-family: var(--font-family-s2);
+  color: white;
+  font-size: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 5%;
+  position: relative;
+}
+
+.icon {
+  max-height: 22vh;
+  object-fit: cover;
+  flex: 1;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  flex: 2;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  position: relative;
+  padding: 0 2%;
+}
+
+.name {
+  width: 100%;
+  color: aliceblue;
+  text-align: center;
+  grid-column: 1/1;
+  grid-row: 1/1;
+  white-space: nowrap;
+  position: relative;
+}
+
+.box {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60%;
+  background-color: black;
+  border: 8px solid blue;
+  transform: skew(20deg);
+  grid-column: 1/1;
+  grid-row: 1/1;
+  position: relative;
+}

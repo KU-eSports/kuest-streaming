@@ -11,11 +11,16 @@ import styles from "./css/style.module.css";
 const Component: FunctionComponent = () => {
   return (
     <div className={styles.container}>
-      <Background />
-      <div>
+      <div className={styles.background}>
+        <Background />
+      </div>
+      <div className={styles.voice}>
+        <Voice />
         <Voice />
       </div>
-      <Frame />
+      <div className={styles.frame}>
+        <Frame />
+      </div>
     </div>
   );
 };
