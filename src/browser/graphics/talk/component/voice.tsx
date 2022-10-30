@@ -9,8 +9,8 @@ const Component: FunctionComponent = () => {
     <div className={styles.wrapper}>
       <img className={styles.icon} src={icontest} />
       <div className={styles.container}>
-        <div className={styles.name}>へのへのもへじ</div>
         <div className={styles.box}></div>
+        <div className={styles.name}>secchanu</div>
       </div>
     </div>
   );

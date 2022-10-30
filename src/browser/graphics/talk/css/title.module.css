@@ -27,13 +27,13 @@
 }
 
 @keyframes rotate {
-  from {
-    transform: rotateY(0deg) rotateZ(-30deg);
+    from {
+      transform: rotateZ(-25deg) rotateY(0deg);
+    }
+    to {
+      transform: rotateZ(-25deg) rotateY(360deg);
+    }
   }
-  to {
-    transform: rotateY(360deg) rotateZ(-30deg);
-  }
-}
 
 .title {
   width: 100%;
