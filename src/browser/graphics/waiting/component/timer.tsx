@@ -38,8 +38,8 @@ const Component: FunctionComponent = () => {
 
   return (
     <div className={styles.container}>
-      <img src={arrow} />
-      {diff > 0 ? (
+      <img src={arrow} className={styles.arrow} />
+      {/* {diff > 0 ? (
         <div className={styles.timer}>
           <div className={styles.minutes}>
             <div className={styles.number}>{pad0(minutes, 2)}</div>
@@ -51,8 +51,8 @@ const Component: FunctionComponent = () => {
           </div>
         </div>
       ) : (
-        <div className={styles.text}>Coming soon</div>
-      )}
+       <div className={styles.text}>Coming soon</div>
+      )} */}
     </div>
   );
 };
