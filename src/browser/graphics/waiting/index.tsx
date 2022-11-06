@@ -5,6 +5,7 @@ import Timer from "./component/timer";
 import Telop from "./component/telop";
 
 import "modern-normalize";
+import "../../common/css/splatnet.css";
 import styles from "./css/style.module.css";
 
 const Component: FunctionComponent = () => {
@@ -16,9 +17,9 @@ const Component: FunctionComponent = () => {
       <div className={styles.timer}>
         <Timer />
       </div>
-      <div className={styles.telop}>
+      {/* <div className={styles.telop}>
         <Telop />
-      </div>
+      </div> */}
     </div>
   );
 };
