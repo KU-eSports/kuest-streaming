@@ -41,7 +41,7 @@ const Component: FunctionComponent = () => {
     <div className={styles.container}>
       <img src={splat} className={styles.splat} />
       <img src={arrow} className={styles.arrow} />
-      {true ? (
+      {diff > 0 ? (
         <div className={styles.timer}>
           <div className={styles.minutes}>
             <div className={styles.number}>{pad0(minutes, 2)}</div>
