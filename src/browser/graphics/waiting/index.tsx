@@ -17,9 +17,9 @@ const Component: FunctionComponent = () => {
       <div className={styles.timer}>
         <Timer />
       </div>
-      {/* <div className={styles.telop}>
+      <div className={styles.telop}>
         <Telop />
-      </div> */}
+      </div>
     </div>
   );
 };

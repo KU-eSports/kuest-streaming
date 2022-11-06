@@ -6,13 +6,12 @@ import styles from "../css/telop.module.css";
 
 const Component: FunctionComponent = () => {
   const waiting = useReplicant("waiting");
-  const title = (waiting?.title || nodecg.bundleConfig.title) ?? "";
   const message = waiting?.message ?? "";
 
   return (
     <div className={styles.wrapper}>
+      {/* メッセージの文字数制限: 文字まで可能 */}
       <div className={styles.editable}>{message}</div>
-      <div className={styles.fixed}>{title}</div>
     </div>
   );
 };

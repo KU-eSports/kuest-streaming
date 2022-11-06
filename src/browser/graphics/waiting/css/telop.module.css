@@ -2,7 +2,8 @@
   position: relative;
   width: 100%;
   height: 100%;
-  color: #0f1822;
+  color: white;
+  font-family: var(--font-family-s2);
 }
 
 .editable {
@@ -12,7 +13,6 @@
   padding: 2% 5%;
   width: 50%;
   font-size: 100px;
-  font-family: "Anton", sans-serif;
   text-shadow: 5px 5px 0 rgba(15, 24, 34, 0.45);
 }
 
@@ -23,6 +23,5 @@
   width: 100%;
   text-align: center;
   font-size: 130px;
-  font-family: "Impact", "Anton", sans-serif;
   text-shadow: 5px 5px 0 rgba(15, 24, 34, 0.45);
 }
