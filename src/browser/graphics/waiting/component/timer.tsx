@@ -7,6 +7,7 @@ import { useReplicant } from "../../../use-replicant";
 import styles from "../css/timer.module.css";
 
 import arrow from "../image/timerarrow.svg"
+import splat from "../image/timersplat.svg"
 
 const refresh = 500;
 
@@ -38,6 +39,7 @@ const Component: FunctionComponent = () => {
 
   return (
     <div className={styles.container}>
+      <img src={splat} className={styles.splat} />
       <img src={arrow} className={styles.arrow} />
       {/* {diff > 0 ? (
         <div className={styles.timer}>
