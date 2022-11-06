@@ -35,14 +35,19 @@ const Component: FunctionComponent = () => {
       setNow(new Date().getTime());
     }, refresh);
     return () => clearInterval(id);
-  });
+  }, [timer]);
 
   return (
     <div className={styles.container}>
       <img src={splat} className={styles.splat} />
-      <img src={arrow} className={styles.arrow} />
+      <img
+        src={arrow}
+        className={`${styles.arrow} ${
+          diff > 0 ? styles.counting : styles.counted
+        }`}
+      />
       {diff > 0 ? (
-        <div className={styles.timer}>
+        <div key={timer} className={styles.timer}>
           <div className={styles.minutes}>
             <div className={styles.number}>{pad0(minutes, 2)}</div>
           </div>
