@@ -31,7 +31,7 @@
 }
 
 .arrow.counted {
-  animation: rotate 5s linear infinite;
+  animation: rotate 1.85s linear infinite;
 }
 
 @keyframes rotate {
