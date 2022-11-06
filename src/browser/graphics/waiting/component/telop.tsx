@@ -10,7 +10,7 @@ const Component: FunctionComponent = () => {
 
   return (
     <div className={styles.wrapper}>
-      {/* メッセージの文字数制限: 文字まで可能 */}
+      {/* メッセージの文字数制限: 全角8文字まで可能 */}
       <div className={styles.editable}>{message}</div>
     </div>
   );

@@ -8,6 +8,7 @@
   place-items: center;
   margin: auto;
   font-family: var(--font-family-s2);
+  text-shadow: 5px 5px 0 rgba(15, 24, 34, 0.45);
 }
 
 .splat {
@@ -40,7 +41,7 @@
   width: 100%;
   grid-column: 1/1;
   grid-row: 1/1;
-  font-size: 100px;
+  font-size: 100%;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -50,5 +51,5 @@
 .text {
   position: absolute;
   text-align: center;
-  font-size: 80px;
+  font-size: 100%;
 }
