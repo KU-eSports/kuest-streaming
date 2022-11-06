@@ -5,7 +5,7 @@ import bg from "../image/bgpattern.svg";
 
 const Component: FunctionComponent = () => {
   return (
-    <div className={styles.background}>
+    <div className={styles.wrapper}>
       <div
         style={{ backgroundImage: `url(${bg})` }}
         className={styles.bgimg}

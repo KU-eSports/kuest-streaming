@@ -5,7 +5,7 @@ import splats from "../image/bluesplats.svg";
 
 const Component: FunctionComponent = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
       <img className={styles.splats} src={splats} />
     </div>
   );

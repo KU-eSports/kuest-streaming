@@ -38,7 +38,7 @@ const Component: FunctionComponent = () => {
   }, [timer]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
       <img src={splat} className={styles.splat} />
       <img
         src={arrow}

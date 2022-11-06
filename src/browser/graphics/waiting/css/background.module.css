@@ -1,15 +1,14 @@
-.background {
-  height: 150%;
-  width: 150%;
-  left: -25%;
-  top: -25%;
-  position: absolute;
+.wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .bgimg {
   height: 100%;
-  background-size: 13%;
+  background-size: 20%;
   background-repeat: repeat;
+  background-position: 20% 20%;
   position: relative;
 }
 

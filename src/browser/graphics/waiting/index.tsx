@@ -12,7 +12,7 @@ import styles from "./css/style.module.css";
 
 const Component: FunctionComponent = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
       <div className={styles.background}>
         <Background />
       </div>
