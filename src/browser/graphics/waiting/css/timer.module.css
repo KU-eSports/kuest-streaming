@@ -18,6 +18,7 @@
 }
 
 .arrow {
+  z-index: 1;
   height: 50%;
   position: absolute;
   grid-column: 1/1;

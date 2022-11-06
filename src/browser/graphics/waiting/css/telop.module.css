@@ -15,13 +15,3 @@
   font-size: 100px;
   text-shadow: 5px 5px 0 rgba(15, 24, 34, 0.45);
 }
-
-.fixed {
-  position: absolute;
-  bottom: 0;
-  padding: 2%;
-  width: 100%;
-  text-align: center;
-  font-size: 130px;
-  text-shadow: 5px 5px 0 rgba(15, 24, 34, 0.45);
-}
