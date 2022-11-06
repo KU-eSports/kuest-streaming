@@ -1,18 +1,18 @@
-.background{
-    height: 150%;
-    width: 150%;
-    left: -25%;
-    top: -25%;
-    position: absolute;
-    }
+.background {
+  height: 150%;
+  width: 150%;
+  left: -25%;
+  top: -25%;
+  position: absolute;
+}
 
 .bgimg {
-    height: 100%;
-    background-size: 13%;
-    background-repeat: repeat;
-    position: relative;
+  height: 100%;
+  background-size: 13%;
+  background-repeat: repeat;
+  position: relative;
 }
 
 .stickers {
-    position: relative;
+  position: relative;
 }

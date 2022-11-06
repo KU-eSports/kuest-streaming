@@ -6,8 +6,8 @@ import { useReplicant } from "../../../use-replicant";
 
 import styles from "../css/timer.module.css";
 
-import arrow from "../image/timerarrow.svg"
-import splat from "../image/timersplat.svg"
+import arrow from "../image/timerarrow.svg";
+import splat from "../image/timersplat.svg";
 
 const refresh = 500;
 
@@ -46,13 +46,17 @@ const Component: FunctionComponent = () => {
           <div className={styles.minutes}>
             <div className={styles.number}>{pad0(minutes, 2)}</div>
           </div>
-        <div className={styles.colon}>:</div>  
+          <div className={styles.colon}>:</div>
           <div className={styles.seconds}>
             <div className={styles.number}>{pad0(seconds, 2)}</div>
           </div>
         </div>
       ) : (
-       <div className={styles.text}>Coming<br />soon</div>
+        <div className={styles.text}>
+          Coming
+          <br />
+          soon
+        </div>
       )}
     </div>
   );
