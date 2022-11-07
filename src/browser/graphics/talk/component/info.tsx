@@ -2,18 +2,22 @@ import type { FunctionComponent } from "react";
 
 import styles from "../css/info.module.css";
 
-import test from "../image/test.png";
 import arrow from "../image/arrow.svg";
+import { useReplicant } from "../../../use-replicant";
 
 const Component: FunctionComponent = () => {
+  const map = useReplicant("map");
+
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.display}>
-        <div className={styles.next}>Next Map</div>
-        <img className={styles.arrow} src={arrow} />
-        <div className={styles.name}>ヤガラ市場</div>
-        <img className={styles.image} src={test} />
-      </div>
+    <div key={map?.name} className={styles.wrapper}>
+      {map && (
+        <div className={styles.display}>
+          <div className={styles.next}>Next Map</div>
+          <img className={styles.arrow} src={arrow} />
+          <div className={styles.name}>{map.name}</div>
+          <img className={styles.image} src={map.image} />
+        </div>
+      )}
     </div>
   );
 };
