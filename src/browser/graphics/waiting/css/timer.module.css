@@ -1,6 +1,6 @@
 .wrapper {
-  width: 100%;
   height: 100%;
+  width: 100%;
   color: white;
   display: grid;
   grid-template-columns: 1fr;
@@ -9,6 +9,7 @@
   margin: auto;
   font-family: var(--font-family-s2);
   text-shadow: 5px 5px 0 rgba(15, 24, 34, 0.45);
+  position: relative;
 }
 
 .splat {
@@ -21,9 +22,9 @@
 .arrow {
   z-index: 1;
   height: 50%;
-  position: absolute;
   grid-column: 1/1;
   grid-row: 1/1;
+  position: absolute;
 }
 
 .arrow.counting {
@@ -49,14 +50,14 @@
   grid-column: 1/1;
   grid-row: 1/1;
   font-size: 100%;
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 
 .text {
-  position: absolute;
   text-align: center;
   font-size: 86%;
+  position: absolute;
 }

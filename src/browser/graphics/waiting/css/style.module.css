@@ -1,37 +1,37 @@
 .wrapper {
-  position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   font-size: 10vmin;
+  position: relative;
 }
 
 .background {
-  position: absolute;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .stickers {
-  position: absolute;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .timer {
-  position: absolute;
   height: 100%;
   width: 100%;
+  position: absolute;
 }
 
 .splats {
-  position: absolute;
   height: 100%;
   width: 100%;
+  position: absolute;
 }
 
 .telop {
-  position: absolute;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  position: absolute;
 }
