@@ -55,14 +55,6 @@
       },
       "volume": { "type": "number" }
     },
-    "required": [
-      "mute",
-      "nick",
-      "pan",
-      "speaking",
-      "user",
-      "voice_state",
-      "volume"
-    ]
+    "required": ["mute", "nick", "pan", "user", "voice_state", "volume"]
   }
 }
