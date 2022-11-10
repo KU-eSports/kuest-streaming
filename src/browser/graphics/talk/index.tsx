@@ -10,7 +10,7 @@ import styles from "./css/style.module.css";
 import { useReplicant } from "../../use-replicant";
 
 const Component: FunctionComponent = () => {
-  const speaking = useReplicant("speaking");
+  const speakers = useReplicant("speaking");
 
   return (
     <div className={styles.container}>
@@ -18,7 +18,7 @@ const Component: FunctionComponent = () => {
         <Background />
       </div>
       <div className={styles.voice}>
-        {speaking?.map((speaker) => {
+        {speakers?.map((speaker) => {
           return <Voice key={speaker.user.id} speaker={speaker} />;
         })}
       </div>

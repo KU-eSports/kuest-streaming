@@ -1,12 +1,12 @@
 {
   "extends": "../../tsconfig",
   "compilerOptions": {
-    "target": "ES2018",
+    "noEmit": true,
+    "target": "ES2021",
     "module": "ESNext",
     "lib": ["ESNext", "DOM"],
     "jsx": "react-jsx",
-    "noEmit": true,
     "types": ["webpack-env"]
   },
-  "include": ["**/*.ts", "**/*.tsx", "../nodecg/**/*.ts"]
+  "include": ["**/*.ts", "**/*.tsx", "../nodecg/**/*.ts", "../@types/*"]
 }

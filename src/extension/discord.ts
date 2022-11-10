@@ -13,11 +13,13 @@ export default async (nodecg: NodeCG) => {
   if (!channel_id) return;
 
   client.on("ready", async () => {
+    const channel = await client.getChannel(channel_id);
+    speakingRep.value = channel.voice_states ?? [];
     client.subscribe("VOICE_STATE_CREATE", { channel_id });
     client.subscribe("VOICE_STATE_DELETE", { channel_id });
     client.subscribe("VOICE_STATE_UPDATE", { channel_id });
-    client.subscribe("SPEAKING_START", {});
-    client.subscribe("SPEAKING_STOP", {});
+    client.subscribe("SPEAKING_START", { channel_id });
+    client.subscribe("SPEAKING_STOP", { channel_id });
   });
 
   client.on("VOICE_STATE_CREATE", (data) => {
