@@ -15,7 +15,12 @@ const Component: FunctionComponent<Props> = (props) => {
 
   return (
     <div className={styles.wrapper}>
-        <img className={`${styles.icon} ${speaker.speaking ? styles.speaking : styles.unspeaking}`} src={avatar} />
+      <img
+        className={`${styles.icon} ${
+          speaker.speaking ? styles.speaking : styles.unspeaking
+        }`}
+        src={avatar}
+      />
       <div className={styles.container}>
         <div className={styles.box}></div>
         <div className={styles.name}>{speaker.nick}</div>
