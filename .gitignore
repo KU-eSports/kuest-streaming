@@ -8,6 +8,8 @@ generated/
 
 /external
 
+/external
+
 # Logs
 logs
 *.log
