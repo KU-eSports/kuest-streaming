@@ -6,6 +6,8 @@ generated/
 /bundle-analyzer
 /external
 
+/external
+
 # Logs
 logs
 *.log

@@ -1,6 +1,6 @@
 # kuest-streaming
 
-KUeST のチャンネルを充実させよう
+KUeST のイベント等の配信に関わるリポジトリです。
 
 ---
 
@@ -8,15 +8,11 @@ KUeST のチャンネルを充実させよう
 
 - 6 月 9 日 [第 1 回 KUeST VALORANT カスタム](https://youtu.be/XbmxlHjoXOk)
 
-![valorantcustom_220609](./obs/thumbnail/220609.png)
-
 - 7 月 16 日 [第 2 回 KUeST VALORANT カスタム Day1](https://youtu.be/2aPHSHxLbYU)
-
-![valorantcustom_220716](./obs/thumbnail/220716.png)
 
 - 7 月 17 日 [第 2 回 KUeST VALORANT カスタム Day2](https://youtu.be/5vVzDPwHQlU)
 
-![valorantcustom_220717](./obs/thumbnail/220717.png)
+- 9 月 24 日 [第 3 回 KUeST VALORANT カスタム](https://youtu.be/swWxKVZNmFY)
 
 ---
 

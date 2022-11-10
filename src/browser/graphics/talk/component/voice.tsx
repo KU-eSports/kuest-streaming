@@ -1,39 +1,51 @@
 import type { FunctionComponent } from "react";
 
-import { useEffect, useState } from "react";
-import { DiscordVoice } from "../../../../nodecg/generated";
-
 import styles from "../css/voice.module.css";
 
 type Props = {
-  userId: string;
-  name: string;
-  src: [string, string];
-  voice: DiscordVoice | null;
+  speaker: {
+    mute: boolean;
+    nick: string;
+    pan: {
+      left: number;
+      right: number;
+    };
+    speaking: boolean;
+    user: {
+      avatar: string | null;
+      avatar_decoration: null;
+      bot: boolean;
+      discriminator: string;
+      flags: number;
+      id: string;
+      premium_type?: number;
+      username: string;
+    };
+    voice_state: {
+      deaf: boolean;
+      mute: boolean;
+      self_deaf: boolean;
+      self_mute: boolean;
+      suppress: boolean;
+    };
+    volume: number;
+  };
 };
 const Component: FunctionComponent<Props> = (props) => {
-  const userId = props.userId;
-  const name = props.name;
-  const src = props.src;
-  const voice = props.voice;
-
-  const [state, setState] = useState(false);
-
-  useEffect(() => {
-    if (userId !== voice?.userId) return;
-    setState(voice.isSpeak ?? false);
-  }, [userId, voice]);
+  const speaker = props.speaker;
+  const avatar = speaker.user.avatar
+    ? `https://cdn.discordapp.com/avatars/${speaker.user.id}/${speaker.user.avatar}.jpg`
+    : `https://cdn.discordapp.com/embed/avatars/${
+        Number(speaker.user.discriminator) % 6
+      }.png`;
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.icon}>
-        {state ? (
-          <img className={styles.speaking} src={src[1]} />
-        ) : (
-          <img className={styles.unspeaking} src={src[0]} />
-        )}
+      <img className={styles.icon} src={avatar} />
+      <div className={styles.container}>
+        <div className={styles.box}></div>
+        <div className={styles.name}>{speaker.nick}</div>
       </div>
-      <div className={styles.name}>{name}</div>
     </div>
   );
 };
