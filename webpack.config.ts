@@ -1,6 +1,6 @@
 import WebpackBar from "webpackbar";
 import { merge } from "webpack-merge";
-import globby from "globby";
+import { sync } from "glob";
 import HtmlPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import path from "path";
@@ -22,7 +22,7 @@ const base: webpack.Configuration = {
 
 const makeBrowserConfig = (name: string): webpack.Configuration => {
   const entry: webpack.Entry = {};
-  const files = globby.sync(`./src/browser/${name}/*.tsx`);
+  const files = sync(`./src/browser/${name}/*.tsx`);
   for (const file of files) {
     entry[path.basename(file, ".tsx")] = file;
   }
@@ -99,7 +99,7 @@ const makeBrowserConfig = (name: string): webpack.Configuration => {
       splitChunks: {
         chunks: "all",
         cacheGroups: {
-          common: { minChunks: files.length },
+          common: { minChunks: files.length || 1 },
           vendors: false,
           default: false,
         },
