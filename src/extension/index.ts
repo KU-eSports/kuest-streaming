@@ -1,5 +1,5 @@
 import "source-map-support/register";
-import { NodeCG } from "./nodecg";
+import type { NodeCG } from "./nodecg";
 
 import discord from "./discord";
 

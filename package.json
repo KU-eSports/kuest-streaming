@@ -17,16 +17,19 @@
     "test:prettier": "prettier \"**/*.{ts,tsx,json,html,yml,css,scss,md}\" --check",
     "test:lint": "eslint --ext .ts .",
     "test:types": "tsc -b src/browser src/extension",
-    "external": "mkdirp external && nget -i nget.txt -P external -nQ"
+    "external": "mkdirp external && nget -i nget.txt -P external -nQ && ncp src/browser/common/image/ external/"
   },
   "license": "MIT",
   "dependencies": {
     "@discordjs/voice": "^0.11.0",
+    "discord-streamkit-rpc": "github:secchanu/discord-streamkit-rpc",
     "discord.js": "^13.10.3",
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "ncp": "^2.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.19.0",
+    "@types/discord-rpc": "^4.0.3",
     "@types/lodash-es": "^4.17.6",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.6",

@@ -7,15 +7,24 @@ import Voice from "./component/voice";
 import "modern-normalize";
 import "../../common/css/splatnet.css";
 import styles from "./css/style.module.css";
+import { useReplicant } from "../../use-replicant";
 
 const Component: FunctionComponent = () => {
+  const speaking = useReplicant("speaking");
+
   return (
     <div className={styles.container}>
-      <Background />
-      <div>
-        <Voice />
+      <div className={styles.background}>
+        <Background />
       </div>
-      <Frame />
+      <div className={styles.voice}>
+        {speaking?.map((speaker) => {
+          return <Voice key={speaker.user.id} speaker={speaker} />;
+        })}
+      </div>
+      <div className={styles.frame}>
+        <Frame />
+      </div>
     </div>
   );
 };

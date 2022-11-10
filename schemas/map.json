@@ -4,8 +4,8 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "isSpeak": { "type": "boolean" },
-    "userId": { "type": "string" }
+    "name": { "type": "string" },
+    "image": { "type": "string" }
   },
   "default": []
 }
