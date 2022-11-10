@@ -19,6 +19,14 @@
   position: relative;
 }
 
+.icon.speaking {
+  filter: brightness(100%);
+}
+
+.icon.unspeaking {
+  filter: brightness(80%);
+}
+
 .container {
   width: 100%;
   flex: 2;
