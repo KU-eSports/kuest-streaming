@@ -8,7 +8,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "channel_id": { "type": "string" }
+        "channel_id": { "type": "string" },
+        "allow": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
       }
     }
   }
