@@ -9,9 +9,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "token": { "type": "string" },
-        "guild": { "type": "string" },
-        "channel": { "type": "string" }
+        "channel_id": { "type": "string" },
+        "allow": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
       }
     }
   }

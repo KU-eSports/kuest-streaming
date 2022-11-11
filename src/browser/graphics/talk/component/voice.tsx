@@ -1,39 +1,38 @@
 import type { FunctionComponent } from "react";
 
-import { useEffect, useState } from "react";
-import { DiscordVoice } from "../../../../nodecg/generated";
-
 import styles from "../css/voice.module.css";
 
+import toomo from "../image/Toomo.png";
+import naka from "../image/N4K4.png";
+const talker: { [key: string]: string | undefined } = {
+  "346592327701102594": toomo,
+  "402750037739831298": naka,
+};
+
 type Props = {
-  userId: string;
-  name: string;
-  src: [string, string];
-  voice: DiscordVoice | null;
+  speaker: Speaker;
 };
 const Component: FunctionComponent<Props> = (props) => {
-  const userId = props.userId;
-  const name = props.name;
-  const src = props.src;
-  const voice = props.voice;
-
-  const [state, setState] = useState(false);
-
-  useEffect(() => {
-    if (userId !== voice?.userId) return;
-    setState(voice.isSpeak ?? false);
-  }, [userId, voice]);
+  const speaker = props.speaker;
+  const id = speaker.user.id;
+  const avatar = speaker.user.avatar
+    ? `https://cdn.discordapp.com/avatars/${speaker.user.id}/${speaker.user.avatar}.jpg`
+    : `https://cdn.discordapp.com/embed/avatars/${
+        Number(speaker.user.discriminator) % 6
+      }.png`;
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.icon}>
-        {state ? (
-          <img className={styles.speaking} src={src[1]} />
-        ) : (
-          <img className={styles.unspeaking} src={src[0]} />
-        )}
+      <img
+        className={`${styles.icon} ${
+          speaker.speaking ? styles.speaking : styles.unspeaking
+        }`}
+        src={talker[id]}
+      />
+      <div className={styles.container}>
+        <div className={styles.box}></div>
+        <div className={styles.name}>{speaker.nick}</div>
       </div>
-      <div className={styles.name}>{name}</div>
     </div>
   );
 };

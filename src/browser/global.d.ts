@@ -1,13 +1,13 @@
-import {
+import type {
   CreateNodecgInstance,
   CreateNodecgConstructor,
 } from "ts-nodecg/browser";
 
 import packageJson from "../../package.json";
 
-import { Configschema } from "../nodecg/generated/configschema";
-import { ReplicantMap } from "../nodecg/replicants";
-import { MessageMap } from "../nodecg/messages";
+import type { Configschema } from "../nodecg/generated/configschema";
+import type { ReplicantMap } from "../nodecg/replicants";
+import type { MessageMap } from "../nodecg/messages";
 
 declare global {
   const nodecg: CreateNodecgInstance<
