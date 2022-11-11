@@ -2,8 +2,6 @@ import type { NodeCG } from "./nodecg";
 
 import { Client } from "discord-streamkit-rpc";
 
-const client = new Client();
-
 export default async (nodecg: NodeCG) => {
   const speakingRep = nodecg.Replicant("speaking", { defaultValue: [] });
 
@@ -11,6 +9,8 @@ export default async (nodecg: NodeCG) => {
 
   const channel_id = config.discord?.channel_id;
   if (!channel_id) return;
+
+  const client = new Client();
 
   client.on("ready", async () => {
     const channel = await client.getChannel(channel_id);

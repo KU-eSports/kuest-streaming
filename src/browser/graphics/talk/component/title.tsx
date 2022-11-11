@@ -1,6 +1,7 @@
 import type { FunctionComponent } from "react";
 
 import styles from "../css/title.module.css";
+
 import logo from "../image/KUeST_logo_alpha.png";
 
 const Component: FunctionComponent = () => {

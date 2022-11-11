@@ -1,6 +1,7 @@
 import type { FunctionComponent } from "react";
 
-import styles from "../css/stickers.css";
+import styles from "../css/stickers.module.css";
+
 import stickers from "../image/stickers.svg";
 
 const Component: FunctionComponent = () => {

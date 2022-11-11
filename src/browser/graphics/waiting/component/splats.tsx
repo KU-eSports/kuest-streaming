@@ -1,6 +1,7 @@
 import type { FunctionComponent } from "react";
 
-import styles from "../css/splats.css";
+import styles from "../css/splats.module.css";
+
 import splats from "../image/bluesplats.svg";
 
 const Component: FunctionComponent = () => {

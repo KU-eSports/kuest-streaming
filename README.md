@@ -14,15 +14,11 @@ KUeST のイベント等の配信に関わるリポジトリです。
 
 - 9 月 24 日 [第 3 回 KUeST VALORANT カスタム](https://youtu.be/swWxKVZNmFY)
 
+- 11 月 12 日 [第 1 回 KUeST Splatoon3 カスタム](https://youtu.be/Du3jJP6VtTw)
+
 ---
 
 ## 使用したリポジトリ外ツール
 
 - [VALORANT リザルト表示ツール](https://github.com/secchanu/nodecg-valorant.git)
   製作：[secchanu](https://github.com/secchanu)
-
----
-
-## 今後の活動
-
-- 運営人数を増やしたい（実況・解説・カメラ・配信・人事）

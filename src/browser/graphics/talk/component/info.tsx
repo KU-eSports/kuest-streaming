@@ -1,9 +1,10 @@
 import type { FunctionComponent } from "react";
 
+import { useReplicant } from "../../../use-replicant";
+
 import styles from "../css/info.module.css";
 
 import arrow from "../image/arrow.svg";
-import { useReplicant } from "../../../use-replicant";
 
 const Component: FunctionComponent = () => {
   const map = useReplicant("map");

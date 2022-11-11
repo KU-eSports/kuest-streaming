@@ -1,5 +1,7 @@
 import type { FunctionComponent } from "react";
 
+import { useReplicant } from "../../use-replicant";
+
 import Background from "./component/background";
 import Frame from "./component/frame";
 import Voice from "./component/voice";
@@ -7,7 +9,6 @@ import Voice from "./component/voice";
 import "modern-normalize";
 import "../../common/css/splatnet.css";
 import styles from "./css/style.module.css";
-import { useReplicant } from "../../use-replicant";
 
 const allow = nodecg.bundleConfig.discord?.allow ?? [];
 

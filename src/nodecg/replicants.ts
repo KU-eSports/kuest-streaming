@@ -1,4 +1,4 @@
-import * as replicant from "./generated/index";
+import type * as replicant from "./generated/index";
 
 type ReplicantMap = {
   waiting: replicant.Waiting;

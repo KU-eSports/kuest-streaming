@@ -1,6 +1,7 @@
 import type { FunctionComponent } from "react";
 
 import styles from "../css/background.module.css";
+
 import bg from "../image/bgpattern.svg";
 
 const Component: FunctionComponent = () => {
