@@ -4,9 +4,11 @@ import styles from "../css/voice.module.css";
 
 import toomo from "../image/Toomo.png";
 import naka from "../image/N4K4.png";
+import secchanu from "../image/secchanu.png";
 const talker: { [key: string]: string | undefined } = {
   "346592327701102594": toomo,
   "402750037739831298": naka,
+  "197321407762399233": secchanu,
 };
 
 type Props = {
