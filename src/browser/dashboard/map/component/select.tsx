@@ -8,44 +8,44 @@ import { getMaps } from "../script/api";
 import styles from "../css/select.module.css";
 
 type Props = {
-  setMap: Function;
+	setMap: Function;
 };
 const Component: FunctionComponent<Props> = (props) => {
-  const [maps, setMaps] = useState<MapDto[]>([]);
-  const setMap = props.setMap;
+	const [maps, setMaps] = useState<MapDto[]>([]);
+	const setMap = props.setMap;
 
-  useEffect(() => {
-    (async () => {
-      const data = await getMaps();
-      setMaps(data);
-    })();
-  }, []);
+	useEffect(() => {
+		(async () => {
+			const data = await getMaps();
+			setMaps(data);
+		})();
+	}, []);
 
-  const getMap = (uuid: string) => {
-    return maps.find((m) => m.uuid === uuid);
-  };
+	const getMap = (uuid: string) => {
+		return maps.find((m) => m.uuid === uuid);
+	};
 
-  return (
-    <div className={styles.select}>
-      <select
-        onChange={(e) => {
-          const map = getMap(e.target.value);
-          setMap(map);
-        }}
-      >
-        <option key={undefined} value={undefined}>
-          未選択
-        </option>
-        {maps.map((map) => {
-          return (
-            <option key={map.uuid} value={map.uuid}>
-              {map.displayName}
-            </option>
-          );
-        })}
-      </select>
-    </div>
-  );
+	return (
+		<div className={styles.select}>
+			<select
+				onChange={(e) => {
+					const map = getMap(e.target.value);
+					setMap(map);
+				}}
+			>
+				<option key={undefined} value={undefined}>
+					未選択
+				</option>
+				{maps.map((map) => {
+					return (
+						<option key={map.uuid} value={map.uuid}>
+							{map.displayName}
+						</option>
+					);
+				})}
+			</select>
+		</div>
+	);
 };
 
 export default Component;

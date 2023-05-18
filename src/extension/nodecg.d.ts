@@ -7,8 +7,8 @@ import { MessageMap } from "../nodecg/messages";
 import { Configschema } from "../nodecg/generated/configschema";
 
 export type NodeCG = CreateNodecgInstance<
-  packageJson.name,
-  Configschema,
-  ReplicantMap,
-  MessageMap
+	packageJson.name,
+	Configschema,
+	ReplicantMap,
+	MessageMap
 >;

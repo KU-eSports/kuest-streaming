@@ -11,26 +11,26 @@ import "modern-normalize";
 import styles from "./css/style.module.css";
 
 const Component: FunctionComponent = () => {
-  const [waiting, setWaiting] = useState({
-    title: nodecg.bundleConfig.title ?? "",
-  });
+	const [waiting, setWaiting] = useState({
+		title: nodecg.bundleConfig.title ?? "",
+	});
 
-  return (
-    <div className={styles.container}>
-      <div className={styles.title}>
-        <Title setWaiting={setWaiting} />
-      </div>
-      <div className={styles.timer}>
-        <Timer setWaiting={setWaiting} />
-      </div>
-      <div className={styles.message}>
-        <Message setWaiting={setWaiting} />
-      </div>
-      <div className={styles.submit}>
-        <Submit waiting={waiting} />
-      </div>
-    </div>
-  );
+	return (
+		<div className={styles.container}>
+			<div className={styles.title}>
+				<Title setWaiting={setWaiting} />
+			</div>
+			<div className={styles.timer}>
+				<Timer setWaiting={setWaiting} />
+			</div>
+			<div className={styles.message}>
+				<Message setWaiting={setWaiting} />
+			</div>
+			<div className={styles.submit}>
+				<Submit waiting={waiting} />
+			</div>
+		</div>
+	);
 };
 
 export default Component;

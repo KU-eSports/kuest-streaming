@@ -8,22 +8,22 @@ import styles from "../css/submit.module.css";
 const valorantMapRep = nodecg.Replicant("valorantMap");
 
 type Props = {
-  map: MapDto | undefined;
+	map: MapDto | undefined;
 };
 const Component: FunctionComponent<Props> = (props) => {
-  const map = props.map;
-  const current = useReplicant("valorantMap");
+	const map = props.map;
+	const current = useReplicant("valorantMap");
 
-  return (
-    <div className={styles.submit}>
-      <button
-        disabled={map?.uuid === current?.uuid}
-        onClick={() => (valorantMapRep.value = map)}
-      >
-        送信
-      </button>
-    </div>
-  );
+	return (
+		<div className={styles.submit}>
+			<button
+				disabled={map?.uuid === current?.uuid}
+				onClick={() => (valorantMapRep.value = map)}
+			>
+				送信
+			</button>
+		</div>
+	);
 };
 
 export default Component;

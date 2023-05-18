@@ -7,25 +7,25 @@ import { ReplicantMap } from "../nodecg/replicants";
  * @param replicantName Replicant name to subscribe to
  */
 export const useReplicant = <TRepName extends keyof ReplicantMap>(
-  replicantName: TRepName
+	replicantName: TRepName,
 ) => {
-  const replicant = nodecg.Replicant(replicantName);
-  const [value, updateValue] = useState<ReplicantMap[TRepName] | null>(null);
+	const replicant = nodecg.Replicant(replicantName);
+	const [value, updateValue] = useState<ReplicantMap[TRepName] | null>(null);
 
-  useEffect(() => {
-    const changeHandler = (newValue: ReplicantMap[TRepName]): void => {
-      updateValue((oldValue) => {
-        if (newValue !== oldValue) {
-          return newValue;
-        }
-        return clone(newValue);
-      });
-    };
-    replicant.on("change", changeHandler);
-    return () => {
-      replicant.removeListener("change", changeHandler);
-    };
-  }, [replicant]);
+	useEffect(() => {
+		const changeHandler = (newValue: ReplicantMap[TRepName]): void => {
+			updateValue((oldValue) => {
+				if (newValue !== oldValue) {
+					return newValue;
+				}
+				return clone(newValue);
+			});
+		};
+		replicant.on("change", changeHandler);
+		return () => {
+			replicant.removeListener("change", changeHandler);
+		};
+	}, [replicant]);
 
-  return value;
+	return value;
 };

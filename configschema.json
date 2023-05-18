@@ -1,18 +1,22 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema",
+	"$schema": "http://json-schema.org/draft-04/schema",
 
-  "type": "object",
-  "additionalProperties": false,
-  "properties": {
-    "title": { "type": "string" },
-    "discord": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "token": { "type": "string" },
-        "guild": { "type": "string" },
-        "channel": { "type": "string" }
-      }
-    }
-  }
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"title": { "type": "string", "default": "KUeST VALORANT CUSTOM GAME" },
+		"discord": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"channel_id": { "type": "string", "default": "" },
+				"allow": {
+					"type": "array",
+					"items": { "type": "string" }
+				}
+			},
+			"required": ["channel_id", "allow"]
+		}
+	},
+	"required": ["title", "discord"]
 }

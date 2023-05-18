@@ -1,9 +1,9 @@
 import * as replicant from "./generated/index";
 
 type ReplicantMap = {
-  valorantMap: replicant.ValorantMap;
-  waiting: replicant.Waiting;
-  discordVoice: replicant.DiscordVoice;
+	waiting: replicant.Waiting;
+	speaking: replicant.Speakers;
+	valorantMap: replicant.ValorantMap;
 };
 
 export { ReplicantMap };

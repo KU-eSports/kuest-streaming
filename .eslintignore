@@ -5,6 +5,8 @@ generated/
 /extension
 /bundle-analyzer
 
+/external
+
 # Logs
 logs
 *.log

@@ -1,34 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 .container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #ff4654;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #ff4654;
 }
 
 .header {
-  position: relative;
-  width: 100%;
-  height: 25%;
-  background-color: #0e1721;
+	position: relative;
+	width: 100%;
+	height: 25%;
+	background-color: #0e1721;
 }
 
 .voices {
-  position: relative;
-  top: 5%;
-  width: 100%;
-  height: 40%;
-  display: flex;
-  justify-content: center;
-  gap: 20%;
+	position: relative;
+	top: 5%;
+	width: 100%;
+	height: 40%;
+	display: flex;
+	justify-content: center;
+	gap: 20%;
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 25%;
-  background-color: #0e1721;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 25%;
+	background-color: #0e1721;
 }

@@ -8,19 +8,19 @@ import "modern-normalize";
 import styles from "./css/style.module.css";
 
 const Component: FunctionComponent = () => {
-  return (
-    <div className={styles.container}>
-      <div className={styles.agent}>
-        <Agent />
-      </div>
-      <div className={styles.timer}>
-        <Timer />
-      </div>
-      <div className={styles.telop}>
-        <Telop />
-      </div>
-    </div>
-  );
+	return (
+		<div className={styles.container}>
+			<div className={styles.agent}>
+				<Agent />
+			</div>
+			<div className={styles.timer}>
+				<Timer />
+			</div>
+			<div className={styles.telop}>
+				<Telop />
+			</div>
+		</div>
+	);
 };
 
 export default Component;

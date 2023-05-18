@@ -1,0 +1,60 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema",
+
+	"type": "array",
+	"items": {
+		"type": "object",
+		"additionalProperties": false,
+		"properties": {
+			"mute": { "type": "boolean" },
+			"nick": { "type": "string" },
+			"pan": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"left": { "type": "number" },
+					"right": { "type": "number" }
+				},
+				"required": ["left", "right"]
+			},
+			"speaking": { "type": "boolean" },
+			"user": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"avatar": { "type": ["string", "null"] },
+					"avatar_decoration": { "type": "null" },
+					"bot": { "type": "boolean" },
+					"discriminator": { "type": "string" },
+					"flags": { "type": "number" },
+					"id": { "type": "string" },
+					"premium_type": { "type": "number" },
+					"username": { "type": "string" }
+				},
+				"required": [
+					"avatar",
+					"avatar_decoration",
+					"bot",
+					"discriminator",
+					"flags",
+					"id",
+					"username"
+				]
+			},
+			"voice_state": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"deaf": { "type": "boolean" },
+					"mute": { "type": "boolean" },
+					"self_deaf": { "type": "boolean" },
+					"self_mute": { "type": "boolean" },
+					"suppress": { "type": "boolean" }
+				},
+				"required": ["deaf", "mute", "self_deaf", "self_mute", "suppress"]
+			},
+			"volume": { "type": "number" }
+		},
+		"required": ["mute", "nick", "pan", "user", "voice_state", "volume"]
+	}
+}
