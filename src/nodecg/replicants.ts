@@ -1,9 +1,9 @@
 import type * as replicant from "./generated/index";
 
 type ReplicantMap = {
-  waiting: replicant.Waiting;
-  speaking: replicant.Speakers;
-  map: replicant.Map;
+	waiting: replicant.Waiting;
+	speakers: replicant.Speakers;
+	splatoon3Map: replicant.Splatoon3Map;
 };
 
 export { ReplicantMap };

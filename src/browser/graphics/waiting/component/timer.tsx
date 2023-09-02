@@ -12,59 +12,59 @@ import splat from "../image/timersplat.svg";
 const refresh = 500;
 
 const msToMS = (ms: number): [number, number] => {
-  const ss = Math.ceil(ms / 1000);
-  const s = ss % 60;
-  const m = Math.round(ss - s) / 60;
-  return [m, s];
+	const ss = Math.ceil(ms / 1000);
+	const s = ss % 60;
+	const m = Math.round(ss - s) / 60;
+	return [m, s];
 };
 
 const pad0 = (number: number, length: number) => {
-  return ("0".repeat(length) + number).slice(-length);
+	return ("0".repeat(length) + number).slice(-length);
 };
 
 const Component: FunctionComponent = () => {
-  const [now, setNow] = useState<number>(new Date().getTime());
-  const waiting = useReplicant("waiting");
-  const timer = waiting?.timer ?? 0;
+	const [now, setNow] = useState<number>(new Date().getTime());
+	const waiting = useReplicant("waiting");
+	const timer = waiting?.timer ?? 0;
 
-  const diff = timer - now;
-  const [minutes, seconds] = msToMS(diff);
+	const diff = timer - now;
+	const [minutes, seconds] = msToMS(diff);
 
-  useEffect(() => {
-    const id = setInterval(() => {
-      setNow(new Date().getTime());
-    }, refresh);
-    return () => clearInterval(id);
-  }, [timer]);
+	useEffect(() => {
+		const id = setInterval(() => {
+			setNow(new Date().getTime());
+		}, refresh);
+		return () => clearInterval(id);
+	}, [timer]);
 
-  return (
-    <div className={styles.wrapper}>
-      <img src={splat} className={styles.splat} />
-      <img
-        src={arrow}
-        className={`${styles.arrow} ${
-          diff > 0 ? styles.counting : styles.counted
-        }`}
-      />
-      {diff > 0 ? (
-        <div key={timer} className={styles.timer}>
-          <div className={styles.minutes}>
-            <div className={styles.number}>{pad0(minutes, 2)}</div>
-          </div>
-          <div className={styles.colon}>:</div>
-          <div className={styles.seconds}>
-            <div className={styles.number}>{pad0(seconds, 2)}</div>
-          </div>
-        </div>
-      ) : (
-        <div className={styles.text}>
-          Coming
-          <br />
-          soon
-        </div>
-      )}
-    </div>
-  );
+	return (
+		<div className={styles["wrapper"]}>
+			<img src={splat} className={styles["splat"]} />
+			<img
+				src={arrow}
+				className={`${styles["arrow"]} ${
+					diff > 0 ? styles["counting"] : styles["counted"]
+				}`}
+			/>
+			{diff > 0 ? (
+				<div key={timer} className={styles["timer"]}>
+					<div className={styles["minutes"]}>
+						<div className={styles["number"]}>{pad0(minutes, 2)}</div>
+					</div>
+					<div className={styles["colon"]}>:</div>
+					<div className={styles["seconds"]}>
+						<div className={styles["number"]}>{pad0(seconds, 2)}</div>
+					</div>
+				</div>
+			) : (
+				<div className={styles["text"]}>
+					Coming
+					<br />
+					soon
+				</div>
+			)}
+		</div>
+	);
 };
 
 export default Component;

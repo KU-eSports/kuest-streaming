@@ -1,37 +1,37 @@
 .wrapper {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  font-size: 10vmin;
-  position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	font-size: 10vmin;
+	position: relative;
 }
 
 .background {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+	height: 100%;
+	width: 100%;
+	position: absolute;
 }
 
 .stickers {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+	height: 100%;
+	width: 100%;
+	position: absolute;
 }
 
 .timer {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+	height: 100%;
+	width: 100%;
+	position: absolute;
 }
 
 .splats {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+	height: 100%;
+	width: 100%;
+	position: absolute;
 }
 
 .telop {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+	height: 100%;
+	width: 100%;
+	position: absolute;
 }

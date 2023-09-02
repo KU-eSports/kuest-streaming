@@ -1,12 +1,10 @@
 {
-  "cSpell.words": [
-    "Configschema",
-    "kuest",
-    "nodecg",
-    "Replicant",
-    "replicants",
-    "Splatoon",
-    "VALORANT",
-    "webpackbar"
-  ]
+	"cSpell.words": [
+		"kuest",
+		"configschema",
+		"fullbleed",
+		"nodecg",
+		"replicant",
+		"replicants"
+	]
 }

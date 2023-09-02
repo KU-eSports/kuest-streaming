@@ -5,15 +5,15 @@ import { useReplicant } from "../../../use-replicant";
 import styles from "../css/telop.module.css";
 
 const Component: FunctionComponent = () => {
-  const waiting = useReplicant("waiting");
-  const message = waiting?.message ?? "";
+	const waiting = useReplicant("waiting");
+	const message = waiting?.message ?? "";
 
-  return (
-    <div className={styles.wrapper}>
-      {/* メッセージの文字数制限: 全角7文字まで可能 */}
-      <div className={styles.editable}>{message}</div>
-    </div>
-  );
+	return (
+		<div className={styles["wrapper"]}>
+			{/* メッセージの文字数制限: 全角7文字まで可能 */}
+			<div className={styles["editable"]}>{message}</div>
+		</div>
+	);
 };
 
 export default Component;

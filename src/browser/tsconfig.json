@@ -1,12 +1,12 @@
 {
-  "extends": "../../tsconfig",
-  "compilerOptions": {
-    "noEmit": true,
-    "target": "ES2021",
-    "module": "ESNext",
-    "lib": ["ESNext", "DOM"],
-    "jsx": "react-jsx",
-    "types": ["webpack-env"]
-  },
-  "include": ["**/*.ts", "**/*.tsx", "../nodecg/**/*.ts", "../@types/*"]
+	"extends": "../../tsconfig",
+	"compilerOptions": {
+		"noEmit": true,
+		"target": "ESNext",
+		"module": "ESNext",
+		"lib": ["ESNext", "DOM"],
+		"jsx": "react-jsx",
+		"types": ["vite/client"]
+	},
+	"include": ["**/*.ts", "**/*.tsx", "../nodecg/**/*.ts"]
 }
