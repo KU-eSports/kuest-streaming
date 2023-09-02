@@ -4,18 +4,25 @@
 	"type": "object",
 	"additionalProperties": false,
 	"properties": {
-		"title": { "type": "string", "default": "KUeST VALORANT CUSTOM GAME" },
+		"title": { "type": "string", "default": "KUeST Streaming" },
 		"discord": {
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
+				"clientId": { "type": "string", "default": "" },
+				"clientSecret": { "type": "string", "default": "" },
 				"channel_id": { "type": "string", "default": "" },
-				"allow": {
-					"type": "array",
-					"items": { "type": "string" }
+				"speakers": {
+					"type": "object",
+					"patternProperties": {
+						"^[0-9]+$": {
+							"type": "string",
+							"format": "uri"
+						}
+					}
 				}
 			},
-			"required": ["channel_id", "allow"]
+			"required": ["channel_id", "speakers"]
 		}
 	},
 	"required": ["title", "discord"]

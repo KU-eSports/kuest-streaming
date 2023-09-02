@@ -1,4 +1,4 @@
-import type { MapDto } from "@/types/valorant";
+import type { MapDto } from "../../../../@types/valorant";
 import type { FunctionComponent } from "react";
 
 import { useReplicant } from "../../../use-replicant";
@@ -15,7 +15,7 @@ const Component: FunctionComponent<Props> = (props) => {
 	const current = useReplicant("valorantMap");
 
 	return (
-		<div className={styles.submit}>
+		<div className={styles["submit"]}>
 			<button
 				disabled={map?.uuid === current?.uuid}
 				onClick={() => (valorantMapRep.value = map)}

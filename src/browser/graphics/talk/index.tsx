@@ -7,28 +7,31 @@ import Banner from "./component/banner";
 import Voice from "./component/voice";
 import Footer from "./component/footer";
 
-import "modern-normalize";
 import styles from "./css/style.module.css";
 
-const allow = nodecg.bundleConfig.discord?.allow ?? [];
+const talkers = nodecg.bundleConfig.discord.speakers;
 
 const Component: FunctionComponent = () => {
-	const speakers = useReplicant("speaking") ?? [];
+	const speakers = useReplicant("speakers") ?? [];
 
 	return (
-		<div className={styles.container}>
+		<div className={styles["container"]}>
 			<Watermark />
-			<div className={styles.header}>
+			<div className={styles["header"]}>
 				<Banner />
 			</div>
-			<div className={styles.voices}>
-				{speakers
-					.filter((s) => allow.includes(s.user.id))
-					.map((speaker) => {
-						return <Voice key={speaker.user.id} speaker={speaker} />;
-					})}
+			<div className={styles["voices"]}>
+				{speakers.reduce((acc, speaker) => {
+					const avatar = talkers[speaker.user.id];
+					if (avatar) {
+						acc.push(
+							<Voice key={speaker.user.id} speaker={speaker} avatar={avatar} />,
+						);
+					}
+					return acc;
+				}, [] as JSX.Element[])}
 			</div>
-			<div className={styles.footer}>
+			<div className={styles["footer"]}>
 				<Footer />
 			</div>
 		</div>

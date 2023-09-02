@@ -1,4 +1,4 @@
-import type { MapDto } from "@/types/valorant";
+import type { MapDto } from "../../../../@types/valorant";
 import type { FunctionComponent } from "react";
 
 import { useEffect, useState } from "react";
@@ -26,7 +26,7 @@ const Component: FunctionComponent<Props> = (props) => {
 	};
 
 	return (
-		<div className={styles.select}>
+		<div className={styles["select"]}>
 			<select
 				onChange={(e) => {
 					const map = getMap(e.target.value);

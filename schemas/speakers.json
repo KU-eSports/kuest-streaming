@@ -20,10 +20,9 @@
 			"speaking": { "type": "boolean" },
 			"user": {
 				"type": "object",
-				"additionalProperties": false,
+				"additionalProperties": true,
 				"properties": {
 					"avatar": { "type": ["string", "null"] },
-					"avatar_decoration": { "type": "null" },
 					"bot": { "type": "boolean" },
 					"discriminator": { "type": "string" },
 					"flags": { "type": "number" },
@@ -33,11 +32,11 @@
 				},
 				"required": [
 					"avatar",
-					"avatar_decoration",
 					"bot",
 					"discriminator",
 					"flags",
 					"id",
+					"premium_type",
 					"username"
 				]
 			},

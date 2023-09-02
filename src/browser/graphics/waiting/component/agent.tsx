@@ -1,4 +1,4 @@
-import type { AgentDto } from "@/types/valorant";
+import type { AgentDto } from "../../../../@types/valorant";
 import type { FunctionComponent } from "react";
 
 import { useEffect, useState } from "react";
@@ -34,9 +34,13 @@ const Component: FunctionComponent = () => {
 	}, [agents]);
 
 	return (
-		<div className={styles.wrapper}>
+		<div className={styles["wrapper"]}>
 			{agent && (
-				<img key={agent.uuid} className={styles.img} src={agent.fullPortrait} />
+				<img
+					key={agent.uuid}
+					className={styles["img"]}
+					src={agent.fullPortrait}
+				/>
 			)}
 		</div>
 	);

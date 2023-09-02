@@ -4,8 +4,8 @@ generated/
 /graphics
 /extension
 /bundle-analyzer
-
-/external
+/cfg
+/shared/dist
 
 # Logs
 logs

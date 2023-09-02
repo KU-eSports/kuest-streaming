@@ -14,9 +14,9 @@ const Component: FunctionComponent = () => {
 	const marquee = getLongStr(title, Math.ceil(10 / (title.length || 1)) * 2);
 
 	return (
-		<div className={styles.wrapper}>
-			<div className={styles.showcase}>
-				<div className={styles.marquee}>{marquee}</div>
+		<div className={styles["wrapper"]}>
+			<div className={styles["showcase"]}>
+				<div className={styles["marquee"]}>{marquee}</div>
 			</div>
 		</div>
 	);

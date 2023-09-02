@@ -11,7 +11,7 @@ const Component: FunctionComponent<Props> = (props) => {
 	const waiting = props.waiting;
 
 	return (
-		<div className={styles.submit}>
+		<div className={styles["submit"]}>
 			<button onClick={() => (waitingRep.value = waiting)}>送信</button>
 		</div>
 	);

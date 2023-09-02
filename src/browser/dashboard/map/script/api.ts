@@ -1,4 +1,4 @@
-import type { MapDto } from "@/types/valorant";
+import type { MapDto } from "../../../../@types/valorant";
 
 export async function getMaps() {
 	const url = "https://valorant-api.com/v1/maps";

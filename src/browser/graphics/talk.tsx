@@ -1,6 +1,5 @@
-import { createRoot } from "react-dom/client";
+import { render } from "../render";
 
-import App from "./talk/";
+import App from "./talk/index";
 
-const root = createRoot(document.getElementById("root")!);
-root.render(<App />);
+render(<App />);

@@ -16,7 +16,7 @@ const Component: FunctionComponent<Props> = (props) => {
 	};
 
 	return (
-		<div className={styles.message}>
+		<div className={styles["message"]}>
 			<input onChange={(e) => setMessage(e.target.value)} />
 		</div>
 	);
