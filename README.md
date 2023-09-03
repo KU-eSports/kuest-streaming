@@ -1,32 +1,25 @@
 # kuest-streaming
 
-KUeST のチャンネルを充実させよう
+KUeSTのイベント等の配信に関わるリポジトリです。
+
+- [VALORANT 版](https://github.com/KU-eSports/kuest-streaming/tree/prod/valorant)
+
+- [Splatoon3 版](https://github.com/KU-eSports/kuest-streaming/tree/prod/splatoon3)
 
 ---
 
 ## 活動実績
 
-- 6 月 9 日 [第 1 回 KUeST VALORANT カスタム](https://youtu.be/XbmxlHjoXOk)
+- 2022/06/09 [第 1 回 KUeST VALORANT カスタム](https://www.youtube.com/live/XbmxlHjoXOk?feature=shared)
 
-![valorantcustom_220609](./obs/thumbnail/220609.png)
+- 2022/07/16 [第 2 回 KUeST VALORANT カスタム Day1](https://www.youtube.com/live/2aPHSHxLbYU?feature=shared)
 
-- 7 月 16 日 [第 2 回 KUeST VALORANT カスタム Day1](https://youtu.be/2aPHSHxLbYU)
+- 2022/07/17 [第 2 回 KUeST VALORANT カスタム Day2](https://www.youtube.com/live/5vVzDPwHQlU?feature=shared)
 
-![valorantcustom_220716](./obs/thumbnail/220716.png)
+- 2022/09/24 [第 3 回 KUeST VALORANT カスタム](https://www.youtube.com/live/swWxKVZNmFY?feature=shared)
 
-- 7 月 17 日 [第 2 回 KUeST VALORANT カスタム Day2](https://youtu.be/5vVzDPwHQlU)
+- 2022/11/12 [第 1 回 KUeST Splatoon3 カスタム](https://www.youtube.com/live/Du3jJP6VtTw?feature=shared)
 
-![valorantcustom_220717](./obs/thumbnail/220717.png)
+- 2023/07/13 [第 5 回 KUeST VALORANT カスタム](https://www.youtube.com/live/6PTI-AwxThI?feature=shared)
 
----
-
-## 使用したリポジトリ外ツール
-
-- [VALORANT リザルト表示ツール](https://github.com/secchanu/nodecg-valorant.git)
-  製作：[secchanu](https://github.com/secchanu)
-
----
-
-## 今後の活動
-
-- 運営人数を増やしたい（実況・解説・カメラ・配信・人事）
+- 2023/07/15 [第 6 回 KUeST VALORANT カスタム](https://www.youtube.com/live/sgaIP6djfM0?feature=shared)
