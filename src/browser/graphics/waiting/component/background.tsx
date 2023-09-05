@@ -5,14 +5,14 @@ import styles from "../css/background.module.css";
 import bg from "../image/bgpattern.svg";
 
 const Component: FunctionComponent = () => {
-  return (
-    <div className={styles.wrapper}>
-      <div
-        style={{ backgroundImage: `url(${bg})` }}
-        className={styles.bgimg}
-      ></div>
-    </div>
-  );
+	return (
+		<div className={styles["wrapper"]}>
+			<div
+				style={{ backgroundImage: `url(${bg})` }}
+				className={styles["bgimg"]}
+			></div>
+		</div>
+	);
 };
 
 export default Component;

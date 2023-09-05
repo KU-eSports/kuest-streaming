@@ -1,43 +1,43 @@
 .wrapper {
-  height: 100%;
-  font-family: var(--font-family-s2);
-  color: var(--color-background);
-  font-size: 100%;
-  position: relative;
+	height: 100%;
+	font-family: var(--font-family-s2);
+	color: var(--color-background);
+	font-size: 100%;
+	position: relative;
 }
 
 .display {
-  height: 100%;
-  left: 0%;
-  position: absolute;
-  display: grid;
-  place-items: center;
-  grid-template-columns: 2% auto auto auto;
-  grid-template-rows: 3% 25% 5% 30% 24% 12%;
-  gap: 0px 10px;
+	height: 100%;
+	left: 0%;
+	position: absolute;
+	display: grid;
+	place-items: center;
+	grid-template-columns: 2% auto auto auto;
+	grid-template-rows: 3% 25% 5% 30% 24% 12%;
+	gap: 0px 10px;
 }
 
 .logo {
-  height: 100%;
-  object-fit: cover;
-  grid-row: 3/6;
-  grid-column: 2/4;
-  animation: rotate 3s infinite;
+	height: 100%;
+	object-fit: cover;
+	grid-row: 3/6;
+	grid-column: 2/4;
+	animation: rotate 3s infinite;
 }
 
 @keyframes rotate {
-  from {
-    transform: rotateZ(-25deg) rotateY(0deg);
-  }
-  to {
-    transform: rotateZ(-25deg) rotateY(360deg);
-  }
+	from {
+		transform: rotateZ(-25deg) rotateY(0deg);
+	}
+	to {
+		transform: rotateZ(-25deg) rotateY(360deg);
+	}
 }
 
 .title {
-  width: 100%;
-  white-space: nowrap;
-  grid-row: 2/4;
-  grid-column: 4/5;
-  font-size: 95%;
+	width: 100%;
+	white-space: nowrap;
+	grid-row: 2/4;
+	grid-column: 4/5;
+	font-size: 95%;
 }

@@ -1,6 +1,6 @@
 import type {
-  CreateNodecgInstance,
-  CreateNodecgConstructor,
+	CreateNodecgInstance,
+	CreateNodecgConstructor,
 } from "ts-nodecg/browser";
 
 import packageJson from "../../package.json";
@@ -10,16 +10,16 @@ import type { ReplicantMap } from "../nodecg/replicants";
 import type { MessageMap } from "../nodecg/messages";
 
 declare global {
-  const nodecg: CreateNodecgInstance<
-    packageJson.name,
-    Configschema,
-    ReplicantMap,
-    MessageMap
-  >;
-  const NodeCG: CreateNodecgConstructor<
-    packageJson.name,
-    Configschema,
-    ReplicantMap,
-    MessageMap
-  >;
+	const nodecg: CreateNodecgInstance<
+		packageJson.name,
+		Configschema,
+		ReplicantMap,
+		MessageMap
+	>;
+	const NodeCG: CreateNodecgConstructor<
+		packageJson.name,
+		Configschema,
+		ReplicantMap,
+		MessageMap
+	>;
 }
