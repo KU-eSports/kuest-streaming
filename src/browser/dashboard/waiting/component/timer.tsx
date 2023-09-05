@@ -65,10 +65,10 @@ const Component: FunctionComponent<Props> = (props) => {
 	}, []);
 
 	return (
-		<div className={styles.timer}>
-			<div className={styles.flex}>
+		<div className={styles["timer"]}>
+			<div className={styles["flex"]}>
 				<label>開始/再開 時間</label>
-				<div className={styles.folder}>
+				<div className={styles["folder"]}>
 					<input
 						type="datetime-local"
 						onChange={(e) => setTimer(ISO2date(e.target.value))}
@@ -77,9 +77,9 @@ const Component: FunctionComponent<Props> = (props) => {
 					<p>頃</p>
 				</div>
 			</div>
-			<div className={styles.flex}>
+			<div className={styles["flex"]}>
 				<label>開始/再開 まで</label>
-				<div className={styles.folder}>
+				<div className={styles["folder"]}>
 					<input
 						type="number"
 						min={0}

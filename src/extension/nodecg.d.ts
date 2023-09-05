@@ -1,10 +1,10 @@
-import { CreateNodecgInstance } from "ts-nodecg/server";
+import type { CreateNodecgInstance } from "ts-nodecg/server";
 
 import packageJson from "../../package.json";
 
-import { ReplicantMap } from "../nodecg/replicants";
-import { MessageMap } from "../nodecg/messages";
-import { Configschema } from "../nodecg/generated/configschema";
+import type { ReplicantMap } from "../nodecg/replicants";
+import type { MessageMap } from "../nodecg/messages";
+import type { Configschema } from "../nodecg/generated/configschema";
 
 export type NodeCG = CreateNodecgInstance<
 	packageJson.name,

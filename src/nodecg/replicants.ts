@@ -2,7 +2,7 @@ import * as replicant from "./generated/index";
 
 type ReplicantMap = {
 	waiting: replicant.Waiting;
-	speaking: replicant.Speakers;
+	speakers: replicant.Speakers;
 	valorantMap: replicant.ValorantMap;
 };
 

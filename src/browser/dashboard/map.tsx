@@ -1,6 +1,5 @@
-import { createRoot } from "react-dom/client";
+import { render } from "../render";
 
-import App from "./map/";
+import App from "./map/index";
 
-const root = createRoot(document.getElementById("root")!);
-root.render(<App />);
+render(<App />);

@@ -7,6 +7,5 @@
 		"title": { "type": "string" },
 		"message": { "type": "string" },
 		"timer": { "type": "integer" }
-	},
-	"default": []
+	}
 }

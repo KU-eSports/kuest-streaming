@@ -35,20 +35,20 @@ const Component: FunctionComponent = () => {
 	});
 
 	return (
-		<div className={styles.container}>
+		<div className={styles["container"]}>
 			{diff > 0 ? (
-				<div className={styles.timer}>
-					<div className={styles.minutes}>
-						<div className={styles.number}>{pad0(minutes, 2)}</div>
-						<div className={styles.unit}>m</div>
+				<div className={styles["timer"]}>
+					<div className={styles["minutes"]}>
+						<div className={styles["number"]}>{pad0(minutes, 2)}</div>
+						<div className={styles["unit"]}>m</div>
 					</div>
-					<div className={styles.seconds}>
-						<div className={styles.number}>{pad0(seconds, 2)}</div>
-						<div className={styles.unit}>s</div>
+					<div className={styles["seconds"]}>
+						<div className={styles["number"]}>{pad0(seconds, 2)}</div>
+						<div className={styles["unit"]}>s</div>
 					</div>
 				</div>
 			) : (
-				<div className={styles.text}>Coming soon</div>
+				<div className={styles["text"]}>Coming soon</div>
 			)}
 		</div>
 	);

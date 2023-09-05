@@ -3,10 +3,12 @@ import type { NodeCG } from "./nodecg";
 import { Client } from "discord-streamkit-rpc";
 
 export default async (nodecg: NodeCG) => {
-	const speakingRep = nodecg.Replicant("speaking", { defaultValue: [] });
+	const speakingRep = nodecg.Replicant("speakers", { defaultValue: [] });
 
 	const config = nodecg.bundleConfig;
 
+	const clientId = config.discord?.clientId!;
+	const clientSecret = config.discord?.clientSecret!;
 	const channel_id = config.discord?.channel_id;
 	if (!channel_id) return;
 
@@ -75,5 +77,12 @@ export default async (nodecg: NodeCG) => {
 		});
 	});
 
-	client.streamkit();
+	if (clientId && clientSecret) {
+		client.login({ clientId, clientSecret, prompt: "none" });
+	} else {
+		console.error(
+			"使用可能な clientId, clientSecret が設定されていないため、デフォルトの設定でDiscordに接続します",
+		);
+		client.streamkit();
+	}
 };

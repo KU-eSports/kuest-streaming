@@ -17,7 +17,7 @@ const Component: FunctionComponent<Props> = (props) => {
 	const defaultTitle = nodecg.bundleConfig.title ?? "";
 
 	return (
-		<div className={styles.title}>
+		<div className={styles["title"]}>
 			<input
 				defaultValue={defaultTitle}
 				onChange={(e) => setTitle(e.target.value)}

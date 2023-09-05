@@ -1,4 +1,4 @@
-import type { AgentDto } from "@/types/valorant";
+import type { AgentDto } from "../../../../@types/valorant";
 
 export async function getAgents() {
 	const url = "https://valorant-api.com/v1/agents?isPlayableCharacter=true";

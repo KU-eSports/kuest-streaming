@@ -10,9 +10,9 @@ const Component: FunctionComponent = () => {
 	const message = waiting?.message ?? "";
 
 	return (
-		<div className={styles.wrapper}>
-			<div className={styles.editable}>{message}</div>
-			<div className={styles.fixed}>{title}</div>
+		<div className={styles["wrapper"]}>
+			<div className={styles["editable"]}>{message}</div>
+			<div className={styles["fixed"]}>{title}</div>
 		</div>
 	);
 };
