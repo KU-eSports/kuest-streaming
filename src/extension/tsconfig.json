@@ -1,9 +1,7 @@
 {
-  "extends": "../../tsconfig",
-  "compilerOptions": {
-    "noEmit": true,
-    "module": "CommonJS",
-    "lib": ["ES2022"]
-  },
-  "include": ["**/*.ts", "../nodecg/**/*.ts", "../@types/*"]
+	"extends": "../../tsconfig",
+	"compilerOptions": {
+		"noEmit": true
+	},
+	"include": ["./**/*.ts", "../nodecg/**/*.d.ts"]
 }

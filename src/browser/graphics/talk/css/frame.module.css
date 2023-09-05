@@ -1,55 +1,55 @@
 .wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
+	width: 100%;
+	height: 100%;
+	position: relative;
 }
 
 .title,
 .info {
-  width: 102%;
-  height: 30%;
-  background-color: var(--color-yellow);
-  position: absolute;
-  left: -1%;
-  transform: rotate(5.5deg);
-  z-index: 2;
+	width: 102%;
+	height: 30%;
+	background-color: var(--color-yellow);
+	position: absolute;
+	left: -1%;
+	transform: rotate(5.5deg);
+	z-index: 2;
 }
 
 .title {
-  top: -10%;
-  z-index: 4;
+	top: -10%;
+	z-index: 4;
 }
 
 .info {
-  bottom: -10%;
+	bottom: -10%;
 }
 
 .right,
 .left {
-  width: 24%;
-  background-color: var(--color-blue);
-  position: absolute;
-  transform: rotate(11deg);
+	width: 24%;
+	background-color: var(--color-blue);
+	position: absolute;
+	transform: rotate(11deg);
 }
 
 .right {
-  height: 100%;
-  bottom: -10%;
-  right: -13%;
-  transform-origin: right bottom;
-  z-index: 3;
+	height: 100%;
+	bottom: -10%;
+	right: -13%;
+	transform-origin: right bottom;
+	z-index: 3;
 }
 
 .left {
-  top: -10%;
-  left: -13%;
-  transform-origin: left top;
+	top: -10%;
+	left: -13%;
+	transform-origin: left top;
 }
 .left.top {
-  height: 60%;
-  z-index: 5;
+	height: 60%;
+	z-index: 5;
 }
 .left.bottom {
-  height: 100%;
-  z-index: 1;
+	height: 100%;
+	z-index: 1;
 }

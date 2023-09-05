@@ -1,25 +1,25 @@
 .timer {
-  width: 100%;
+	width: 100%;
 }
 
 .flex {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
 
 .folder {
-  width: 70%;
-  display: flex;
-  justify-content: right;
-  align-items: flex-end;
+	width: 70%;
+	display: flex;
+	justify-content: right;
+	align-items: flex-end;
 }
 
 .folder input {
-  width: 90%;
-  font-size: 20px;
-  text-align: center;
+	width: 90%;
+	font-size: 20px;
+	text-align: center;
 }
 .folder p {
-  margin: 0;
+	margin: 0;
 }

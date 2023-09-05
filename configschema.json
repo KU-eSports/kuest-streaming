@@ -1,20 +1,29 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema",
+	"$schema": "http://json-schema.org/draft-04/schema",
 
-  "type": "object",
-  "additionalProperties": false,
-  "properties": {
-    "title": { "type": "string" },
-    "discord": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "channel_id": { "type": "string" },
-        "allow": {
-          "type": "array",
-          "items": { "type": "string" }
-        }
-      }
-    }
-  }
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"title": { "type": "string", "default": "KUeST Streaming" },
+		"discord": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"clientId": { "type": "string", "default": "" },
+				"clientSecret": { "type": "string", "default": "" },
+				"channel_id": { "type": "string", "default": "" },
+				"speakers": {
+					"type": "object",
+					"patternProperties": {
+						"^[0-9]+$": {
+							"type": "string",
+							"format": "uri"
+						}
+					}
+				}
+			},
+			"required": ["channel_id", "speakers"]
+		}
+	},
+	"required": ["title", "discord"]
 }

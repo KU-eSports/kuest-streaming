@@ -1,106 +1,101 @@
 {
-  "name": "kuest-streaming",
-  "version": "0.0.0",
-  "description": "",
-  "scripts": {
-    "start": "(cd ../.. && node index.js)",
-    "build": "webpack",
-    "clean": "del-cli bundle-analyzer dashboard extension graphics external",
-    "dev": "run-p dev:*",
-    "dev:schema-types": "onchange schemas configschema.json -i -- nodecg schema-types -o src/nodecg/generated",
-    "dev:tsc": "tsc -b src/browser src/extension -w --preserveWatchOutput",
-    "dev:webpack": "cross-env WEBPACK_WATCH=true webpack",
-    "format": "prettier \"**/*.{ts,tsx,json,html,yml,css,scss,md}\" --check --write",
-    "prod": "cross-env NODE_ENV=production run-s schema-types clean build external",
-    "schema-types": "del-cli src/nodecg/generated && nodecg schema-types -o src/nodecg/generated",
-    "test": "run-s test:lint test:prettier schema-types test:types",
-    "test:prettier": "prettier \"**/*.{ts,tsx,json,html,yml,css,scss,md}\" --check",
-    "test:lint": "eslint --ext .ts .",
-    "test:types": "tsc -b src/browser src/extension",
-    "external": "mkdirp external && nget -i nget.txt -P external -nQ && ncp src/browser/common/image/ external/"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "discord-streamkit-rpc": "github:secchanu/discord-streamkit-rpc",
-    "lodash-es": "^4.17.21"
-  },
-  "devDependencies": {
-    "@babel/preset-env": "^7.19.0",
-    "@types/discord-rpc": "^4.0.3",
-    "@types/lodash-es": "^4.17.6",
-    "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.6",
-    "@types/source-map-support": "^0.5.4",
-    "@types/webpack-bundle-analyzer": "^4.4.2",
-    "@types/webpack-env": "^1.18.0",
-    "@types/webpack-node-externals": "^2.5.3",
-    "@typescript-eslint/eslint-plugin": "^5.36.2",
-    "@typescript-eslint/parser": "^5.36.2",
-    "@warren-bank/node-request-cli": "^4.0.18",
-    "babel-loader": "^8.2.5",
-    "cross-env": "^7.0.3",
-    "css-loader": "^6.7.1",
-    "del-cli": "^5.0.0",
-    "eslint": "^8.23.1",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "file-loader": "^6.2.0",
-    "glob": "^8.0.3",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.6.1",
-    "mkdirp": "^1.0.4",
-    "modern-normalize": "^1.1.0",
-    "ncp": "^2.0.0",
-    "nodecg-cli": "^8.0.1",
-    "npm-run-all": "^4.1.5",
-    "onchange": "^7.1.0",
-    "prettier": "2.7.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "ts-loader": "^9.3.1",
-    "ts-node": "^10.9.1",
-    "ts-nodecg": "^0.3.1",
-    "typescript": "^4.8.3",
-    "webpack": "^5.74.0",
-    "webpack-bundle-analyzer": "^4.6.1",
-    "webpack-cli": "^4.10.0",
-    "webpack-merge": "^5.8.0",
-    "webpack-node-externals": "^3.0.0",
-    "webpackbar": "^5.0.2"
-  },
-  "nodecg": {
-    "compatibleRange": "^1.0.0",
-    "dashboardPanels": [
-      {
-        "name": "map",
-        "title": "マップ",
-        "file": "map.html",
-        "width": 2
-      },
-      {
-        "name": "waiting",
-        "title": "待機画面",
-        "file": "waiting.html",
-        "width": 3
-      }
-    ],
-    "graphics": [
-      {
-        "file": "waiting.html",
-        "width": 1920,
-        "height": 1080
-      },
-      {
-        "file": "talk.html",
-        "width": 1920,
-        "height": 1080
-      }
-    ],
-    "mount": [
-      {
-        "directory": "external",
-        "endpoint": "external"
-      }
-    ]
-  }
+	"name": "kuest-streaming",
+	"version": "0.0.0",
+	"description": "",
+	"license": "MIT",
+	"scripts": {
+		"build": "vite build",
+		"dev": "run-p dev:*",
+		"dev:nodecg": "onchange extension schema configschema.json -ik -- node --enable-source-maps ../..",
+		"dev:schema-types": "onchange schemas configschema.json -i -- npm run schema-types",
+		"dev:tsc": "tsc -b src/browser src/extension -w --preserveWatchOutput",
+		"dev:vite": "vite",
+		"external": "mkdirp external && nget -i nget.txt -P external -nQ && ncp src/browser/common/image/ external/",
+		"format": "run-s format:*",
+		"format:prettier": "npm run test:prettier -- --write",
+		"format:sort-package-json": "sort-package-json",
+		"prepare": "husky install",
+		"schema-types": "del-cli src/nodecg/generated && nodecg schema-types -o src/nodecg/generated",
+		"start": "(cd ../.. && node index.js)",
+		"test": "run-s schema-types test:*",
+		"test:lint": "eslint --ext .ts,.tsx .",
+		"test:prettier": "prettier \"**/*.{ts,tsx,json,html,yml,css,scss,md}\" --check",
+		"test:types": "tsc -b src/browser src/extension"
+	},
+	"lint-staged": {
+		"*.{ts,tsx,json,html,yml,css,scss,md}": [
+			"prettier --write"
+		],
+		"package.json": [
+			"sort-package-json"
+		]
+	},
+	"dependencies": {
+		"@warren-bank/node-request-cli": "^4.0.19",
+		"discord-streamkit-rpc": "github:secchanu/discord-streamkit-rpc",
+		"mkdirp": "^3.0.1",
+		"ncp": "^2.0.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.21",
+		"@types/react-dom": "^18.2.7",
+		"@typescript-eslint/parser": "^6.5.0",
+		"@vitejs/plugin-react": "^4.0.4",
+		"del-cli": "^5.0.1",
+		"eslint": "^8.48.0",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"glob": "^10.3.3",
+		"husky": "^8.0.3",
+		"klona": "^2.0.6",
+		"lint-staged": "^14.0.1",
+		"modern-normalize": "^2.0.0",
+		"nodecg-cli": "^8.6.8",
+		"npm-run-all2": "^6.0.6",
+		"onchange": "^7.1.0",
+		"prettier": "^3.0.3",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"rollup": "^3.28.1",
+		"rollup-plugin-esbuild": "^5.0.0",
+		"rollup-plugin-node-externals": "^6.1.1",
+		"sort-package-json": "^2.5.1",
+		"ts-nodecg": "^0.3.1",
+		"typescript": "^5.2.2",
+		"vite": "^4.4.9"
+	},
+	"nodecg": {
+		"compatibleRange": "^2.0.0",
+		"dashboardPanels": [
+			{
+				"name": "map",
+				"title": "マップ",
+				"file": "map.html",
+				"width": 2
+			},
+			{
+				"name": "waiting",
+				"title": "待機画面",
+				"file": "waiting.html",
+				"width": 3
+			}
+		],
+		"graphics": [
+			{
+				"file": "waiting.html",
+				"width": 1920,
+				"height": 1080
+			},
+			{
+				"file": "talk.html",
+				"width": 1920,
+				"height": 1080
+			}
+		],
+		"mount": [
+			{
+				"directory": "external",
+				"endpoint": "external"
+			}
+		]
+	}
 }

@@ -1,63 +1,63 @@
 .wrapper {
-  height: 100%;
-  width: 100%;
-  color: white;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  place-items: center;
-  margin: auto;
-  font-family: var(--font-family-s2);
-  text-shadow: 5px 5px 0 rgba(15, 24, 34, 0.45);
-  position: relative;
+	height: 100%;
+	width: 100%;
+	color: white;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	place-items: center;
+	margin: auto;
+	font-family: var(--font-family-s2);
+	text-shadow: 5px 5px 0 rgba(15, 24, 34, 0.45);
+	position: relative;
 }
 
 .splat {
-  height: 90%;
-  grid-column: 1/1;
-  grid-row: 1/1;
-  position: absolute;
+	height: 90%;
+	grid-column: 1/1;
+	grid-row: 1/1;
+	position: absolute;
 }
 
 .arrow {
-  z-index: 1;
-  height: 50%;
-  grid-column: 1/1;
-  grid-row: 1/1;
-  position: absolute;
+	z-index: 1;
+	height: 50%;
+	grid-column: 1/1;
+	grid-row: 1/1;
+	position: absolute;
 }
 
 .arrow.counting {
-  animation: rotate 2s cubic-bezier(0.83, 0.25, 0.4, 0.84) infinite;
+	animation: rotate 2s cubic-bezier(0.83, 0.25, 0.4, 0.84) infinite;
 }
 
 .arrow.counted {
-  animation: rotate 1.85s linear infinite;
+	animation: rotate 1.85s linear infinite;
 }
 
 @keyframes rotate {
-  from {
-    transform: rotate(60deg);
-  }
-  to {
-    transform: rotate(420deg);
-  }
+	from {
+		transform: rotate(60deg);
+	}
+	to {
+		transform: rotate(420deg);
+	}
 }
 
 .timer {
-  height: 100%;
-  width: 100%;
-  grid-column: 1/1;
-  grid-row: 1/1;
-  font-size: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
+	height: 100%;
+	width: 100%;
+	grid-column: 1/1;
+	grid-row: 1/1;
+	font-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
 }
 
 .text {
-  text-align: center;
-  font-size: 86%;
-  position: absolute;
+	text-align: center;
+	font-size: 86%;
+	position: absolute;
 }

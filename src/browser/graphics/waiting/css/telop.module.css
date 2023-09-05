@@ -1,18 +1,18 @@
 .wrapper {
-  height: 100%;
-  width: 100%;
-  color: white;
-  text-align: center;
-  font-family: var(--font-family-s2);
-  position: relative;
+	height: 100%;
+	width: 100%;
+	color: white;
+	text-align: center;
+	font-family: var(--font-family-s2);
+	position: relative;
 }
 
 .editable {
-  top: 19%;
-  left: 7%;
-  width: 30%;
-  font-size: 100%;
-  text-shadow: 5px 5px 0 rgba(15, 24, 34, 0.45);
-  transform: rotate(-10deg);
-  position: absolute;
+	top: 19%;
+	left: 7%;
+	width: 30%;
+	font-size: 100%;
+	text-shadow: 5px 5px 0 rgba(15, 24, 34, 0.45);
+	transform: rotate(-10deg);
+	position: absolute;
 }
